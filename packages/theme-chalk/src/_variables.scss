@@ -1,0 +1,44 @@
+/* Element Chalk Variables */
+
+/* Color
+-------------------------- */
+$--color-primary: #409eff !default;
+$--color-white: #ffffff !default;
+$--color-text-regular: #606266 !default;
+$--color-text-placeholder: #c0c4cc !default;
+$--color-info: #909399 !default;
+
+/* Transition
+-------------------------- */
+
+/* Border
+-------------------------- */
+$--border-radius-base: 4px !default;
+$--border-style-base: solid !default;
+$--border-width-base: 1px !default;
+$--border-color-base: #dcdfe6 !default;
+$--border-color-hover: #c0c4cc !default;
+$--border-color-focus: $--color-primary !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+
+/* Border
+-------------------------- */
+$--background-color-base: #f5f7fa !default;
+
+/* Typography
+-------------------------- */
+$--font-path: './fonts' !default;
+$--font-display: 'auto' !default;
+$--font-size-base: 14px !default;
+
+/* Input
+-------------------------- */
+$--input-border-radius: $--border-radius-base !default;
+$--input-border: $--border-base !default;
+$--input-height: 40px !default;
+$--input-background-color: $--color-white !default;
+$--input-font-color: $--color-text-regular !default;
+$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-border-color-hover: $--border-color-hover !default;
+$--input-border-color-focus: $--border-color-focus !default;

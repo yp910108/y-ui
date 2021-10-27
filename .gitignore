@@ -1,0 +1,9 @@
+node_modules
+lib
+examples/y-ui
+examples/pages/en-US
+examples/pages/zh-CN
+examples/pages/es
+examples/pages/fr-FR
+
+package-lock.json

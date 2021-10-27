@@ -1,0 +1,35 @@
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str-slice($selector, 2, -2);
+  @return $selector;
+}
+
+@function containsModifier($selector) {
+  @if str-index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containWhenFlag($selector) {
+  @if str-index($selector, '.' + $state-prefix) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containPseudoClass($selector) {
+  @if str-index($selector, ':') {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+// 命中 --、.is- 或者 :
+@function hitAllSpecialNestRule($selector) {
+  $selector: selectorToString($selector);
+  @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
+}
