@@ -1,5 +1,5 @@
 <template>
-  <form
+  <div
     class="y-form-item"
     :class="{
       'y-form-item--feedback': !!yForm && !!yForm.statusIcon,
@@ -32,7 +32,7 @@
         </slot>
       </transition>
     </div>
-  </form>
+  </div>
 </template>
 
 <script>
