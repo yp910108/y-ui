@@ -11,9 +11,10 @@
 </template>
 
 <script>
+import { noop } from 'main/utils/util'
+
 export default {
   name: 'YForm',
-  // componentName: 'YForm' // hack for what?
   props: {
     model: Object,
     rules: Object,
@@ -59,14 +60,17 @@ export default {
         field.resetField()
       }
     },
-    clearValidate(props = []) {
-      const fields = props.length
-        ? typeof props === 'string'
-          ? this.fields.filter((field) => field.prop === props)
-          : this.fields.filter((field) => props.includes(field.prop))
-        : this.fields
+    validateField(props, cb) {
+      if (!Array.isArray(props)) {
+        props = [props]
+      }
+      const fields = this.fields.filter((field) => props.includes(field.prop))
+      if (!fields.length) {
+        console.warn('[Yui Warn]please pass correct props!')
+        return
+      }
       for (const field of fields) {
-        field.clearValidate()
+        field.validate('', cb)
       }
     },
     validate(callback) {
@@ -103,32 +107,59 @@ export default {
         return promise
       }
     },
-    validateField(props, cb) {
-      if (!Array.isArray(props)) {
-        props = [props]
-      }
-      const fields = this.fields.filter((field) => props.includes(field.prop))
-      if (!fields.length) {
-        console.warn('[Yui Warn]please pass correct props!')
-        return
-      }
+    clearValidate(props = []) {
+      const fields = props.length
+        ? typeof props === 'string'
+          ? this.fields.filter((field) => field.prop === props)
+          : this.fields.filter((field) => props.includes(field.prop))
+        : this.fields
       for (const field of fields) {
-        field.validate('', cb)
+        field.clearValidate()
+      }
+    },
+    getLabelWidthIndex(width) {
+      const index = this.potentialLabelWidthArr.index(width)
+      // it's impossible // hcak for what?
+      if (index === -1) {
+        throw new Error(`[YuiForm]unexpected width ${width}`)
+      }
+      return index
+    },
+    registerLabelWidth(val, oldVal) {
+      if (val && oldVal) {
+        const index = this.getLabelWidthIndex(oldVal)
+        this.potentialLabelWidthArr.splice(index, 1, val)
+      } else if (val) {
+        this.potentialLabelWidthArr.push(val)
+      }
+    },
+    deregisterLabelWidth(val) {
+      const index = this.getLabelWidthIndex(val)
+      this.potentialLabelWidthArr.splice(index, 1)
+    }
+  },
+  computed: {
+    autoLabelWidth() {
+      if (!this.potentialLabelWidthArr.length) return 0
+      const max = Math.max(...this.potentialLabelWidthArr, 0)
+      return `${max}px`
+    }
+  },
+  watch: {
+    rules() {
+      for (const field of rules) {
+        field.removeValidateEvents()
+        field.addValidateEvents()
+      }
+      if (this.validateOnRuleChange) {
+        this.validate(noop)
       }
     }
   },
   created() {
-    this.$on('y.form.addField', (field) => {
-      // hack for what?
-      if (field) {
-        this.fields.push(field)
-      }
-    })
+    this.$on('y.form.addField', this.fields.push)
     this.$on('y.form.removeField', (field) => {
-      // hack for what?
-      if (field.prop) {
-        this.fields.splice(this.fields.indexOf(field), 1)
-      }
+      this.fields.splice(this.fields.indexOf(field), 1)
     })
   }
 }
