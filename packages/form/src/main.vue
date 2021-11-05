@@ -15,7 +15,6 @@ import { noop } from 'main/utils/util'
 
 export default {
   name: 'YForm',
-  // TODO
   props: {
     model: Object,
     rules: Object,
@@ -43,7 +42,7 @@ export default {
   data() {
     return {
       fields: [],
-      potentialLabelWidthArr: [] // use this array to calculate auto width // TODO
+      potentialLabelWidthArr: [] // use this array to calculate auto width
     }
   },
   provide() {
@@ -119,16 +118,9 @@ export default {
         field.resetField()
       }
     },
-    // TODO
     getLabelWidthIndex(width) {
-      const index = this.potentialLabelWidthArr.indexOf(width)
-      // it's impossible // hcak for what?
-      if (index === -1) {
-        throw new Error(`[YuiForm]unexpected width ${width}`)
-      }
-      return index
+      return this.potentialLabelWidthArr.indexOf(width)
     },
-    // TODO
     registerLabelWidth(val, oldVal) {
       if (val && oldVal) {
         const index = this.getLabelWidthIndex(oldVal)
@@ -137,15 +129,13 @@ export default {
         this.potentialLabelWidthArr.push(val)
       }
     },
-    // TODO
     deregisterLabelWidth(val) {
       const index = this.getLabelWidthIndex(val)
       this.potentialLabelWidthArr.splice(index, 1)
     }
   },
   computed: {
-    // TODO
-    autoLabelWidth() {
+    maxLabelWidth() {
       if (!this.potentialLabelWidthArr.length) return 0
       const max = Math.max(...this.potentialLabelWidthArr, 0)
       return `${max}px`

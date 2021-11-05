@@ -44,7 +44,6 @@ import LabelWrap from './label-wrap'
 export default {
   name: 'YFormItem',
   mixins: [emitter],
-  // TODO
   props: {
     label: String,
     labelWidth: String,
@@ -72,7 +71,7 @@ export default {
       validateMessage: undefined,
       validateDisabled: undefined,
       isNested: undefined,
-      computedLabelWidth: undefined // TODO
+      computedLabelWidth: undefined
     }
   },
   provide() {
@@ -141,7 +140,7 @@ export default {
       this.validateMessage = undefined
       const { model } = this.form
       if (!model || !this.prop) return
-      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop // TODO
+      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop // TODO 为什么要判断 : ？
       const { o, k } = getPropByPath(model, path)
       this.validateDisabled = true
       o[k] = this.initialValue
@@ -173,7 +172,6 @@ export default {
     removeValidateEvents() {
       this.$off()
     },
-    // TODO
     updateComputedLabelWidth(width) {
       this.computedLabelWidth = `${width}px`
     }
@@ -200,17 +198,16 @@ export default {
       const labelWidth = this.labelWidth || this.form.labelWidth
       return labelWidth ? { width: labelWidth } : {}
     },
-    // TODO
+    // TODO label 有 margin-left 不会影响这里吗？
     styleContent() {
       const ret = {}
       if (this.form.labelPosition === 'top' || this.form.inline) return ret
-      const label = this.label
-      if (!label && !this.labelWidth && this.isNested) return ret
+      if (!this.label && !this.labelWidth && this.isNested) return ret
       const labelWidth = this.labelWidth || this.form.labelWidth
       if (this.labelWidth === 'auto') {
         ret.marginLeft = this.computedLabelWidth
       } else if (this.form.labelWidth === 'auto') {
-        ret.marginLeft = this.yForm.autoLabelWidth
+        ret.marginLeft = this.yForm.maxLabelWidth
       } else {
         ret.marginLeft = labelWidth
       }

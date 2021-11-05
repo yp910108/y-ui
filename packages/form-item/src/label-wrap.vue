@@ -29,8 +29,9 @@ export default {
     const slots = this.$slots.default
     if (!slots) return
     if (this.isAutoWidth) {
-      const autoLabelWidth = this.yForm.autoLabelWidth
-      const marginLeft = parseInt(autoLabelWidth) - this.computedWidth
+      const maxLabelWidth = this.yForm.maxLabelWidth
+      const marginLeft = parseInt(maxLabelWidth) - this.computedWidth
+      // TODO margin-left 会不会为负数？
       const style = { marginLeft: `${marginLeft}px` }
       return (
         <div class="y-form-item__label-wrap" style={style}>
