@@ -15,6 +15,7 @@ import { noop } from 'main/utils/util'
 
 export default {
   name: 'YForm',
+  // TODO
   props: {
     model: Object,
     rules: Object,
@@ -42,7 +43,7 @@ export default {
   data() {
     return {
       fields: [],
-      potentialLabelWidthArr: [] // use this array to calculate auto width
+      potentialLabelWidthArr: [] // use this array to calculate auto width // TODO
     }
   },
   provide() {
@@ -51,32 +52,24 @@ export default {
     }
   },
   methods: {
-    resetFields() {
-      if (!this.model) {
-        console.warn('[Yui Warn][Form]model is required for resetFields to work.')
-        return
-      }
-      for (const field of this.fields) {
-        field.resetField()
-      }
-    },
     validateField(props, cb) {
+      if (!this.model) {
+        return console.warn('[Yui Warn][Form]model is required for validateField to work.')
+      }
       if (!Array.isArray(props)) {
         props = [props]
       }
-      const fields = this.fields.filter((field) => props.includes(field.prop))
+      const fields = this.fields.filter(({ prop }) => props.includes(prop))
       if (!fields.length) {
-        console.warn('[Yui Warn]please pass correct props!')
-        return
+        return console.warn('[Yui Warn]please pass correct props!')
       }
       for (const field of fields) {
-        field.validate('', cb)
+        field.validate(undefined, cb)
       }
     },
     validate(callback) {
       if (!this.model) {
-        console.warn('[Yui Warn][Form]model is required for resetFields to work.')
-        return
+        return console.warn('[Yui Warn][Form]model is required for validate to work.')
       }
       let promise
       if (typeof callback !== 'function') {
@@ -93,11 +86,11 @@ export default {
       }
       let invalidFields = {}
       for (const field of this.fields) {
-        field.validate('', (message, field) => {
+        field.validate(undefined, (message, invalidField) => {
           if (message) {
             valid = false
           }
-          invalidFields = { ...invalidFields, field }
+          invalidFields = { ...invalidFields, invalidField }
           if (++count === this.fields.length) {
             callback(valid, invalidFields)
           }
@@ -108,23 +101,34 @@ export default {
       }
     },
     clearValidate(props = []) {
-      const fields = props.length
-        ? typeof props === 'string'
-          ? this.fields.filter((field) => field.prop === props)
-          : this.fields.filter((field) => props.includes(field.prop))
-        : this.fields
+      const fields =
+        props && props.length
+          ? typeof props === 'string'
+            ? this.fields.filter((field) => field.prop === props)
+            : this.fields.filter((field) => props.includes(field.prop))
+          : this.fields
       for (const field of fields) {
         field.clearValidate()
       }
     },
+    resetFields() {
+      if (!this.model) {
+        return console.warn('[Yui Warn][Form]model is required for resetFields to work.')
+      }
+      for (const field of this.fields) {
+        field.resetField()
+      }
+    },
+    // TODO
     getLabelWidthIndex(width) {
-      const index = this.potentialLabelWidthArr.index(width)
+      const index = this.potentialLabelWidthArr.indexOf(width)
       // it's impossible // hcak for what?
       if (index === -1) {
         throw new Error(`[YuiForm]unexpected width ${width}`)
       }
       return index
     },
+    // TODO
     registerLabelWidth(val, oldVal) {
       if (val && oldVal) {
         const index = this.getLabelWidthIndex(oldVal)
@@ -133,12 +137,14 @@ export default {
         this.potentialLabelWidthArr.push(val)
       }
     },
+    // TODO
     deregisterLabelWidth(val) {
       const index = this.getLabelWidthIndex(val)
       this.potentialLabelWidthArr.splice(index, 1)
     }
   },
   computed: {
+    // TODO
     autoLabelWidth() {
       if (!this.potentialLabelWidthArr.length) return 0
       const max = Math.max(...this.potentialLabelWidthArr, 0)
@@ -147,7 +153,7 @@ export default {
   },
   watch: {
     rules() {
-      for (const field of rules) {
+      for (const field of this.fields) {
         field.removeValidateEvents()
         field.addValidateEvents()
       }

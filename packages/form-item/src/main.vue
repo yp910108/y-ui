@@ -11,7 +11,7 @@
       [`y-form-item--${sizeClass}`]: sizeClass
     }"
   >
-    <label-wrap :is-auto-width="styleLabel && styleLabel.width === 'auto'" :update-all="form.labelWidth === 'auto'">
+    <label-wrap :is-auto-width="styleLabel.width === 'auto'" :update-all="form.labelWidth === 'auto'">
       <label v-if="label || $slots.label" :for="labelFor" class="y-form-item__label" :style="styleLabel">
         <slot name="label">{{ label + form.labelSuffix }}</slot>
       </label>
@@ -44,6 +44,7 @@ import LabelWrap from './label-wrap'
 export default {
   name: 'YFormItem',
   mixins: [emitter],
+  // TODO
   props: {
     label: String,
     labelWidth: String,
@@ -71,7 +72,7 @@ export default {
       validateMessage: undefined,
       validateDisabled: undefined,
       isNested: undefined,
-      computedLabelWidth: undefined
+      computedLabelWidth: undefined // TODO
     }
   },
   provide() {
@@ -81,17 +82,17 @@ export default {
   },
   methods: {
     getRules() {
-      let finalRules = []
+      let rulesFinal = []
       const { rules, required } = this
       if (rules) {
-        finalRules = Array.isArray(rules) ? rules : [rules]
+        rulesFinal = Array.isArray(rules) ? rules : [rules]
       } else {
         const formRules = this.form.rules
         const { v } = getPropByPath(formRules, this.prop || '')
-        v && (finalRules = v)
+        v && (rulesFinal = v)
       }
-      const isRequired = finalRules.find((required) => !!required)
-      return !isRequired && required ? [{ required }, ...finalRules] : finalRules
+      const isRequired = rulesFinal.find((required) => !!required)
+      return !isRequired && required ? [{ required }, ...rulesFinal] : rulesFinal
     },
     getTriggerRules(_trigger) {
       const rules = this.getRules()
@@ -125,18 +126,24 @@ export default {
       }
       validator.validate(model, { firstFields: true }, (errors, invalidFields) => {
         this.validateState = !!errors ? 'error' : 'success'
-        this.validateMessage = !!errors ? errors[0].message : ''
+        this.validateMessage = ((errors || [])[0] || {}).message
         callback(this.validateMessage, invalidFields)
         this.yForm && this.yForm.$emit('validate', this.prop, !errors, this.validateMessage)
       })
+    },
+    clearValidate() {
+      this.validateState = undefined
+      this.validateMessage = undefined
+      this.validateDisabled = undefined
     },
     resetField() {
       this.validateState = undefined
       this.validateMessage = undefined
       const { model } = this.form
       if (!model || !this.prop) return
-      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop
+      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop // TODO
       const { o, k } = getPropByPath(model, path)
+      this.validateDisabled = true
       o[k] = this.initialValue
       // reset validateDisabled after onFieldChange triggered
       this.$nextTick(() => {
@@ -145,23 +152,16 @@ export default {
       // hack for what?
       this.broadcast('YTimeSelect', 'fieldReset', this.initialValue)
     },
-    clearValidate() {
-      this.validateState = undefined
-      this.validateMessage = undefined
-      this.validateDisabled = undefined
-    },
+    // hack for what?
     onFieldBlur() {
       this.validate('blur')
     },
+    // hack for what?
     onFieldChange() {
       if (this.validateDisabled) {
-        this.validateDisabled = false
-        return
+        return (this.validateDisabled = false)
       }
       this.validate('change')
-    },
-    updateComputedLabelWidth(width) {
-      this.computedLabelWidth = `${width}px`
     },
     addValidateEvents() {
       const rules = this.getRules()
@@ -172,36 +172,13 @@ export default {
     },
     removeValidateEvents() {
       this.$off()
+    },
+    // TODO
+    updateComputedLabelWidth(width) {
+      this.computedLabelWidth = `${width}px`
     }
   },
   computed: {
-    labelFor() {
-      return this.for || this.prop
-    },
-    styleLabel() {
-      const ret = {}
-      if (this.form.labelPosition === 'top') return ret
-      const labelWidth = this.labelWidth || this.form.labelWidth
-      labelWidth && (reg.labelWidth = labelWidth)
-      return ret
-    },
-    styleContent() {
-      const ret = {}
-      if (this.form.labelPosition === 'top' || this.form.inline) return ret
-      const label = this.label
-      if (!label && !this.labelWidth && this.isNested) return ret
-      const labelWidth = this.labelWidth || this.form.labelWidth
-      if (labelWidth === 'auto') {
-        if (this.labelWidth === 'auto') {
-          ret.marginLeft = this.computedLabelWidth
-        } else if (this.form.labelWidth === 'auto') {
-          ret.marginLeft = this.yForm.autoLabelWidth
-        }
-      } else {
-        ret.marginLeft = labelWidth
-      }
-      return ret
-    },
     // TODO 直接用 yForm 行吗？
     form() {
       let parent = this.$parent
@@ -215,6 +192,30 @@ export default {
       }
       return parent
     },
+    labelFor() {
+      return this.for || this.prop
+    },
+    styleLabel() {
+      if (this.form.labelPosition === 'top') return {}
+      const labelWidth = this.labelWidth || this.form.labelWidth
+      return labelWidth ? { width: labelWidth } : {}
+    },
+    // TODO
+    styleContent() {
+      const ret = {}
+      if (this.form.labelPosition === 'top' || this.form.inline) return ret
+      const label = this.label
+      if (!label && !this.labelWidth && this.isNested) return ret
+      const labelWidth = this.labelWidth || this.form.labelWidth
+      if (this.labelWidth === 'auto') {
+        ret.marginLeft = this.computedLabelWidth
+      } else if (this.form.labelWidth === 'auto') {
+        ret.marginLeft = this.yForm.autoLabelWidth
+      } else {
+        ret.marginLeft = labelWidth
+      }
+      return ret
+    },
     fieldValue() {
       const { model } = this.form
       if (!model || !this.prop) return
@@ -225,12 +226,9 @@ export default {
       const rules = this.getRules()
       return rules.some((rule) => rule.required)
     },
-    formItemSize() {
-      return this.size || this.yForm.size
-    },
     sizeClass() {
       // hack for what?
-      return this.formItemSize || (this.$YUI || {}).size
+      return this.size || this.yForm.size || (this.$YUI || {}).size
     }
   },
   watch: {
@@ -242,16 +240,19 @@ export default {
       }
     },
     validateStatus(value) {
-      this.validateStatus = value
+      this.validateState = value
     }
   },
   mounted() {
     this.dispatch('YForm', 'y.form.addField', this)
-    this.initialValue = this.fieldValue
+    // TODO
+    this.initialValue = Array.isArray(this.fieldValue) ? [...this.fieldValue] : this.fieldValue
     this.addValidateEvents()
   },
   beforeDestroy() {
     this.dispatch('YForm', 'y.form.removeField', this)
+    // hack for what? 为什么这一句不需要？
+    this.removeValidateEvents()
   }
 }
 </script>
