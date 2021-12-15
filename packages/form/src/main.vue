@@ -153,7 +153,9 @@ export default {
     }
   },
   created() {
-    this.$on('y.form.addField', this.fields.push)
+    this.$on('y.form.addField', (field) => {
+      this.fields.push(field)
+    })
     this.$on('y.form.removeField', (field) => {
       this.fields.splice(this.fields.indexOf(field), 1)
     })

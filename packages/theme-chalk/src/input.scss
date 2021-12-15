@@ -19,9 +19,9 @@
     background-color: $--input-background-color;
     color: $--input-font-color;
     transition: $--border-transition-base;
-    // &::-ms-reveal {
-    //   display: none;
-    // }
+    &::-ms-reveal {
+      display: none;
+    }
     &::placeholder {
       color: $--input-placeholder-color;
     }

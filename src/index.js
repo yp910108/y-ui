@@ -2,11 +2,13 @@
 
 import Input from '../packages/input'
 import Form from '../packages/form'
+import FormItem from '../packages/form-item'
 import Icon from '../packages/icon'
 
 const components = [
   Input,
   Form,
+  FormItem,
   Icon
 ]
 
@@ -25,5 +27,6 @@ export default {
   install,
   Input,
   Form,
+  FormItem,
   Icon
 }

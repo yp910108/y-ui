@@ -14,6 +14,7 @@ let content = `@import './config';
 @import './variables';
 @import './functions';
 @import './mixins';
+@import './transition';
 `
 
 for (const key of Object.keys(Components)) {

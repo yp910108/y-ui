@@ -13,7 +13,7 @@
   >
     <label-wrap :is-auto-width="styleLabel.width === 'auto'" :update-all="form.labelWidth === 'auto'">
       <label v-if="label || $slots.label" :for="labelFor" class="y-form-item__label" :style="styleLabel">
-        <slot name="label">{{ label + form.labelSuffix }}</slot>
+        <slot name="label">{{ label + (form.labelSuffix || '') }}</slot>
       </label>
     </label-wrap>
     <div class="y-form-item__content" :style="styleContent">
@@ -54,8 +54,7 @@ export default {
     validateStatus: String,
     for: String,
     inlineMessage: {
-      type: [String, Boolean],
-      default: ''
+      type: Boolean
     },
     showMessage: {
       type: Boolean,
@@ -140,7 +139,7 @@ export default {
       this.validateMessage = undefined
       const { model } = this.form
       if (!model || !this.prop) return
-      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop // TODO 为什么要判断 : ？
+      const path = this.prop.includes(':') ? this.prop.replace(/:/, '.') : this.prop
       const { o, k } = getPropByPath(model, path)
       this.validateDisabled = true
       o[k] = this.initialValue
@@ -177,7 +176,6 @@ export default {
     }
   },
   computed: {
-    // TODO 直接用 yForm 行吗？
     form() {
       let parent = this.$parent
       let parentName = parent.$options.name
@@ -242,14 +240,13 @@ export default {
   },
   mounted() {
     this.dispatch('YForm', 'y.form.addField', this)
-    // TODO
     this.initialValue = Array.isArray(this.fieldValue) ? [...this.fieldValue] : this.fieldValue
     this.addValidateEvents()
   },
   beforeDestroy() {
     this.dispatch('YForm', 'y.form.removeField', this)
     // hack for what? 为什么这一句不需要？
-    this.removeValidateEvents()
+    // this.removeValidateEvents()
   }
 }
 </script>

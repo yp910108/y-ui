@@ -1,0 +1,12 @@
+.y-zoom-in-top-enter-active,
+.y-zoom-in-top-leave-active {
+  opacity: 1;
+  transition: $--md-fade-transition;
+  transform-origin: center top;
+  transform: scaleY(1);
+}
+.y-zoom-in-top-enter,
+.y-zoom-in-top-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+}

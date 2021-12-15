@@ -3,13 +3,11 @@
 /* Color
 -------------------------- */
 $--color-primary: #409eff !default;
-$--color-white: #ffffff !default;
+$--color-white: #fff !default;
+$--color-danger: #f56c6c !default;
+$--color-info: #909399 !default;
 $--color-text-regular: #606266 !default;
 $--color-text-placeholder: #c0c4cc !default;
-$--color-info: #909399 !default;
-
-/* Transition
--------------------------- */
 
 /* Border
 -------------------------- */
@@ -22,15 +20,19 @@ $--border-color-focus: $--color-primary !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 $--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
-/* Border
+/* Background
 -------------------------- */
 $--background-color-base: #f5f7fa !default;
 
-/* Typography
+/* Font
 -------------------------- */
 $--font-path: './fonts' !default;
 $--font-display: 'auto' !default;
 $--font-size-base: 14px !default;
+
+/* Transition
+-------------------------- */
+$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 
 /* Input
 -------------------------- */
@@ -42,3 +44,7 @@ $--input-font-color: $--color-text-regular !default;
 $--input-placeholder-color: $--color-text-placeholder !default;
 $--input-border-color-hover: $--border-color-hover !default;
 $--input-border-color-focus: $--border-color-focus !default;
+
+/* Form
+-------------------------- */
+$--form-label-font-size: $--font-size-base !default;

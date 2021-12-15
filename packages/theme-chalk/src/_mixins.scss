@@ -12,7 +12,7 @@
   $selector: &;
   $currentSelector: '';
   @each $unit in $element {
-    $currentSelector: #{$currentSelector + '.' + $B + $y-separator + $unit + ','};
+    $currentSelector: #{$currentSelector + '.' + $B + $element-separator + $unit + ','};
   }
   @if hitAllSpecialNestRule($selector) {
     @at-root {
@@ -37,10 +37,37 @@
   @each $unit in $modifier {
     $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
   }
-  @debug $currentSelector;
   @at-root {
     #{$currentSelector} {
       @content;
     }
+  }
+}
+
+@mixin utils-clearfix {
+  $selector: &;
+  @at-root {
+    #{$selector}:before,
+    #{$selector}:after {
+      content: '';
+      display: table;
+    }
+    #{$selector}:after {
+      clear: both;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state } {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($pseudo) {
+  @at-root #{&}#{':#{$pseudo}'} {
+    @content;
   }
 }
