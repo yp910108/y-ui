@@ -55,9 +55,9 @@
     background-color: $--background-color-base;
     color: $--color-info;
     white-space: nowrap;
-    // &:focus {
-    //   outline: line; // hack for what?
-    // }
+    &:focus {
+      outline: line;
+    }
   }
   @include e(prepend) {
     border-top-right-radius: 0;

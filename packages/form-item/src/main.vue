@@ -44,6 +44,7 @@ import LabelWrap from './label-wrap'
 export default {
   name: 'YFormItem',
   mixins: [emitter],
+  inject: ['yForm'],
   props: {
     label: String,
     labelWidth: String,
@@ -53,16 +54,13 @@ export default {
     error: String,
     validateStatus: String,
     for: String,
-    inlineMessage: {
-      type: Boolean
-    },
+    inlineMessage: Boolean,
     showMessage: {
       type: Boolean,
       default: true
     },
     size: String
   },
-  inject: ['yForm'],
   components: { LabelWrap },
   data() {
     return {
@@ -150,11 +148,9 @@ export default {
       // hack for what?
       this.broadcast('YTimeSelect', 'fieldReset', this.initialValue)
     },
-    // hack for what?
     onFieldBlur() {
       this.validate('blur')
     },
-    // hack for what?
     onFieldChange() {
       if (this.validateDisabled) {
         return (this.validateDisabled = false)
@@ -196,7 +192,6 @@ export default {
       const labelWidth = this.labelWidth || this.form.labelWidth
       return labelWidth ? { width: labelWidth } : {}
     },
-    // TODO label 有 margin-left 不会影响这里吗？
     styleContent() {
       const ret = {}
       if (this.form.labelPosition === 'top' || this.form.inline) return ret
@@ -222,7 +217,6 @@ export default {
       return rules.some((rule) => rule.required)
     },
     sizeClass() {
-      // hack for what?
       return this.size || this.yForm.size || (this.$YUI || {}).size
     }
   },
@@ -245,8 +239,7 @@ export default {
   },
   beforeDestroy() {
     this.dispatch('YForm', 'y.form.removeField', this)
-    // hack for what? 为什么这一句不需要？
-    // this.removeValidateEvents()
+    this.removeValidateEvents()
   }
 }
 </script>

@@ -31,7 +31,6 @@ export default {
     if (this.isAutoWidth) {
       const maxLabelWidth = this.yForm.maxLabelWidth
       const marginLeft = parseInt(maxLabelWidth) - this.computedWidth
-      // TODO margin-left 会不会为负数？
       const style = { marginLeft: `${marginLeft}px` }
       return (
         <div class="y-form-item__label-wrap" style={style}>

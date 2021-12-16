@@ -34,10 +34,7 @@ export default {
       type: Boolean,
       default: true
     },
-    hideRequiredAsterisk: {
-      type: Boolean,
-      default: false
-    }
+    hideRequiredAsterisk: Boolean
   },
   data() {
     return {
@@ -89,7 +86,7 @@ export default {
           if (message) {
             valid = false
           }
-          invalidFields = { ...invalidFields, invalidField }
+          invalidFields = { ...invalidFields, ...invalidField }
           if (++count === this.fields.length) {
             callback(valid, invalidFields)
           }

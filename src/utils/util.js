@@ -10,3 +10,8 @@ export function getPropByPath(obj, path) {
   const k = keys[keys.length - 1]
   return { o, k, v: o[k] }
 }
+
+export const kebabCase = function (str) {
+  const hyphenateRE = /([^-])([A-Z])/g
+  return str.replace(hyphenateRE, '$1-$2').replace(hyphenateRE, '$1-$2').toLowerCase()
+}
