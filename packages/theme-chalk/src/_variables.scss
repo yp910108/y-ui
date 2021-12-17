@@ -7,18 +7,8 @@ $--color-white: #fff !default;
 $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
 $--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
 $--color-text-placeholder: #c0c4cc !default;
-
-/* Border
--------------------------- */
-$--border-radius-base: 4px !default;
-$--border-style-base: solid !default;
-$--border-width-base: 1px !default;
-$--border-color-base: #dcdfe6 !default;
-$--border-color-hover: #c0c4cc !default;
-$--border-color-focus: $--color-primary !default;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
-$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
 /* Background
 -------------------------- */
@@ -29,21 +19,53 @@ $--background-color-base: #f5f7fa !default;
 $--font-path: './fonts' !default;
 $--font-display: 'auto' !default;
 $--font-size-base: 14px !default;
+$--font-color-base: $--color-text-regular !default;
+
+/* Border
+-------------------------- */
+$--border-radius-base: 4px !default;
+$--border-style-base: solid !default;
+$--border-width-base: 1px !default;
+$--border-color-base: #dcdfe6 !default;
+$--border-color-hover: #c0c4cc !default;
+$--border-color-light: #e4e7ed !default;
+$--border-color-focus: $--color-primary !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+
+/* Disable color
+-------------------------- */
+$--disabled-background-color-base: $--background-color-base !default;
+$--disabled-font-color-base: $--color-text-placeholder !default;
+$--disabled-border-color-base: $--border-color-light !default;
 
 /* Transition
 -------------------------- */
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
 /* Input
 -------------------------- */
 $--input-border-radius: $--border-radius-base !default;
 $--input-border: $--border-base !default;
 $--input-height: 40px !default;
-$--input-background-color: $--color-white !default;
-$--input-font-color: $--color-text-regular !default;
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-height-medium: 36px !default;
+$--input-height-small: 32px !default;
+$--input-height-mini: 28px !default;
+$--input-font-size: $--font-size-base !default;
+$--input-font-size-medium: 14px !default;
+$--input-font-size-small: 13px !default;
+$--input-font-size-mini: 12px !default;
 $--input-border-color-hover: $--border-color-hover !default;
 $--input-border-color-focus: $--border-color-focus !default;
+$--input-border-color-disabled: $--disabled-border-color-base !default;
+$--input-background-color: $--color-white !default;
+$--input-background-color-disabled: $--disabled-background-color-base !default;
+$--input-font-color: $--font-color-base !default;
+$--input-font-color-disabled: $--disabled-font-color-base !default;
+$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-icon-color: $--color-text-placeholder !default;
+$--input-clear-hover-color: $--color-text-secondary !default;
 
 /* Form
 -------------------------- */

@@ -325,6 +325,18 @@ export default {
     nativeInputValue() {
       return this.value === null || this.value === undefined ? '' : String(this.value)
     },
+    showClear() {
+      return (
+        this.clearable &&
+        !this.inputDisabled &&
+        !this.readonly &&
+        this.nativeInputValue &&
+        (this.focused || this.hovering)
+      )
+    },
+    showPwdVisible() {
+      return this.showPassword && !this.inputDisabled && !this.readonly && (!!this.nativeInputValue || this.focused)
+    },
     isWordLimitVisible() {
       return (
         this.showWordLimit &&
