@@ -386,7 +386,7 @@ export default {
     }
   },
   created() {
-    this.$on('inputSelect', this.select)
+    this.$on('inputSelect', this.select) // hack for what?
   },
   mounted() {
     this.setNativeInputValue()

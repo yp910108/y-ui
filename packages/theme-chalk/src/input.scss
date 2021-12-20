@@ -60,7 +60,7 @@
   display: inline-block;
   width: 100%;
   font-size: $--font-size-base;
-  @include scroll-bar(); // TODO
+  @include scroll-bar();
   & .y-input__clear {
     font-size: $--input-font-size;
     color: $--input-icon-color;
