@@ -1,10 +1,17 @@
 <script>
 export default {
+  inject: {
+    yForm: {
+      default: () => ({})
+    },
+    yFormItem: {
+      default: () => ({})
+    }
+  },
   props: {
     isAutoWidth: Boolean,
     updateAll: Boolean
   },
-  inject: ['yForm', 'yFormItem'],
   data() {
     return {
       computedWidth: 0

@@ -44,7 +44,11 @@ import LabelWrap from './label-wrap'
 export default {
   name: 'YFormItem',
   mixins: [emitter],
-  inject: ['yForm'],
+  inject: {
+    yForm: {
+      default: () => ({})
+    }
+  },
   props: {
     label: String,
     labelWidth: String,

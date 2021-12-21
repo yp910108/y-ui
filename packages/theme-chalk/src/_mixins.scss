@@ -73,6 +73,12 @@
   }
 }
 
+@mixin utils-user-select($value) {
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+}
+
 @mixin utils-clearfix {
   $selector: &;
   @at-root {
@@ -98,5 +104,78 @@
 @mixin pseudo($pseudo) {
   @at-root #{&}#{':#{$pseudo}'} {
     @content;
+  }
+}
+
+@mixin button-plain($color) {
+  border-color: mix($--color-white, $color, 60%);
+  background-color: mix($--color-white, $color, 90%);
+  color: $color;
+  &:hover,
+  &:focus {
+    border-color: $color;
+    background-color: $color;
+    color: $--color-white;
+  }
+  &:active {
+    border-color: mix($--color-black, $color, $--button-active-shade-percent);
+    background-color: mix($--color-black, $color, $--button-active-shade-percent);
+    color: $--color-white;
+    outline: none;
+  }
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: mix($--color-white, $color, 80%);
+      background-color: mix($--color-white, $color, 90%);
+      color: mix($--color-white, $color, 40%);
+    }
+  }
+}
+
+@mixin button-variant($border-color, $background-color, $color) {
+  border-color: $border-color;
+  background-color: $background-color;
+  color: $color;
+  &:hover,
+  &:focus {
+    border-color: mix($--color-white, $border-color, $--button-hover-tint-percent);
+    background-color: mix($--color-white, $background-color, $--button-hover-tint-percent);
+    color: $color;
+  }
+  &:active {
+    border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
+    background-color: mix($--color-black, $background-color, $--button-active-shade-percent);
+    color: $color;
+    outline: none;
+  }
+  &.is-active {
+    border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
+    background-color: mix($--color-black, $background-color, $--button-active-shade-percent);
+    color: $color;
+  }
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: mix($border-color, $--color-white);
+      background-color: mix($background-color, $--color-white);
+      color: $--color-white;
+    }
+  }
+  &.is-plain {
+    @include button-plain($background-color);
+  }
+}
+
+@mixin button-size($border-radius, $padding-vertical, $padding-horizontal, $font-size) {
+  border-radius: $border-radius;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  &.is-round {
+    padding: $padding-vertical $padding-horizontal;
   }
 }

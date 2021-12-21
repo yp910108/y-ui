@@ -1,4 +1,5 @@
 {
+  "button": "./packages/button/index.js",
   "input": "./packages/input/index.js",
   "form": "./packages/form/index.js",
   "form-item": "./packages/form-item/index.js",

@@ -109,7 +109,14 @@ export default {
   name: 'YInput',
   inheritAttrs: false,
   mixins: [emitter, Migrating],
-  inject: ['yForm', 'yFormItem'],
+  inject: {
+    yForm: {
+      default: () => ({})
+    },
+    yFormItem: {
+      default: () => ({})
+    }
+  },
   props: {
     value: [String, Number],
     size: String,
@@ -320,7 +327,7 @@ export default {
       return this.size || this.yFormItem.size || this.yForm.size || (this.$YUI || {}).size
     },
     inputDisabled() {
-      return this.disabled || (this.yForm || {}).disabled
+      return this.disabled || this.yForm.disabled
     },
     nativeInputValue() {
       return this.value === null || this.value === undefined ? '' : String(this.value)
