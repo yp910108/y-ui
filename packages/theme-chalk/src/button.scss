@@ -117,41 +117,41 @@
   }
   @include m(primary) {
     @include button-variant(
-      $--button-primary-font-color,
+      $--button-primary-border-color,
       $--button-primary-background-color,
-      $--button-primary-border-color
+      $--button-primary-font-color
     );
   }
   @include m(success) {
     @include button-variant(
-      $--button-success-font-color,
+      $--button-success-border-color,
       $--button-success-background-color,
-      $--button-success-border-color
+      $--button-success-font-color
     );
   }
   @include m(warning) {
     @include button-variant(
-      $--button-warning-font-color,
+      $--button-warning-border-color,
       $--button-warning-background-color,
-      $--button-warning-border-color
+      $--button-warning-font-color
     );
   }
   @include m(danger) {
     @include button-variant(
-      $--button-danger-font-color,
+      $--button-danger-border-color,
       $--button-danger-background-color,
-      $--button-danger-border-color
+      $--button-danger-font-color
     );
   }
   @include m(info) {
-    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+    @include button-variant($--button-info-border-color, $--button-info-background-color, $--button-info-font-color);
   }
   @include m(medium) {
     @include button-size(
+      $--button-border-radius-medium,
       $--button-padding-vertical-medium,
       $--button-padding-horizontal-medium,
-      $--button-font-size-medium,
-      $--button-border-radius-medium
+      $--button-font-size-medium
     );
     @include when(circle) {
       padding: $--button-padding-vertical-medium;
@@ -159,10 +159,10 @@
   }
   @include m(small) {
     @include button-size(
+      $--button-border-radius-small,
       $--button-padding-vertical-small,
       $--button-padding-horizontal-small,
-      $--button-font-size-small,
-      $--button-border-radius-small
+      $--button-font-size-small
     );
     @include when(circle) {
       padding: $--button-padding-vertical-small;
@@ -170,10 +170,10 @@
   }
   @include m(mini) {
     @include button-size(
+      $--button-border-radius-mini,
       $--button-padding-vertical-mini,
       $--button-padding-horizontal-mini,
-      $--button-font-size-mini,
-      $--button-border-radius-mini
+      $--button-font-size-mini
     );
     @include when(circle) {
       padding: $--button-padding-vertical-mini;

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <y-button>click</y-button>
+    <y-button type="primary">click</y-button>
   </div>
 </template>
 
