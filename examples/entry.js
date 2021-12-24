@@ -7,7 +7,7 @@ import entry from './app'
 import 'packages/theme-chalk/src/index.scss'
 
 // Vue.use(VueRouter)
-Vue.use(Yui)
+Vue.use(Yui, { size: 'small' })
 
 // const router = new VueRouter({
 //   mode: 'hash',

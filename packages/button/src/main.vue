@@ -1,6 +1,9 @@
 <template>
   <button
     class="y-button"
+    :type="nativeType"
+    :autofocus="autofocus"
+    :disabled="buttonDisabled || loading"
     :class="{
       [`y-button--${type}`]: type,
       [`y-button--${sizeClass}`]: sizeClass,
@@ -10,6 +13,7 @@
       'is-round': round,
       'is-circle': circle
     }"
+    @click="handleClick"
   >
     <i v-if="loading" class="y-icon-loading" />
     <i v-if="!loading && icon" :class="icon" />
