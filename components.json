@@ -1,7 +1,9 @@
 {
   "button": "./packages/button/index.js",
-  "input": "./packages/input/index.js",
+  "col": "./packages/col/index.js",
   "form": "./packages/form/index.js",
   "form-item": "./packages/form-item/index.js",
-  "icon": "./packages/icon/index.js"
+  "icon": "./packages/icon/index.js",
+  "input": "./packages/input/index.js",
+  "row": "./packages/row/index.js"
 }
