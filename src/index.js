@@ -10,6 +10,7 @@ import FormItem from '../packages/form-item'
 import Header from '../packages/header'
 import Icon from '../packages/icon'
 import Input from '../packages/input'
+import Link from '../packages/link'
 import Main from '../packages/main'
 import Row from '../packages/row'
 
@@ -24,6 +25,7 @@ const components = [
   Header,
   Icon,
   Input,
+  Link,
   Main,
   Row
 ]
@@ -56,6 +58,7 @@ export default {
   Header,
   Icon,
   Input,
+  Link,
   Main,
   Row
 }

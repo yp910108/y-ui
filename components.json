@@ -9,6 +9,7 @@
   "header": "./packages/header/index.js",
   "icon": "./packages/icon/index.js",
   "input": "./packages/input/index.js",
+  "link": "./packages/link/index.js",
   "main": "./packages/main/index.js",
   "row": "./packages/row/index.js"
 }

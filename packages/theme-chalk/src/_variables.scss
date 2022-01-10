@@ -58,7 +58,7 @@ $--disabled-border-color-base: $--border-color-light !default;
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
-/* Input
+/* Button
 -------------------------- */
 $--button-border-radius: $--border-radius-base !default;
 $--button-border-radius-medium: $--border-radius-base !default;
@@ -101,6 +101,18 @@ $--button-disabled-font-color: $--color-text-placeholder !default;
 $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
 
+/* Form
+-------------------------- */
+$--form-label-font-size: $--font-size-base !default;
+
+/* Footer
+--------------------------*/
+$--footer-padding: 0 20px !default;
+
+/* Header
+  --------------------------*/
+$--header-padding: 0 20px !default;
+
 /* Input
 -------------------------- */
 $--input-border-radius: $--border-radius-base !default;
@@ -124,21 +136,22 @@ $--input-placeholder-color: $--color-text-placeholder !default;
 $--input-icon-color: $--color-text-placeholder !default;
 $--input-clear-hover-color: $--color-text-secondary !default;
 
-/* Form
--------------------------- */
-$--form-label-font-size: $--font-size-base !default;
-
-/* Header
-  --------------------------*/
-$--header-padding: 0 20px !default;
+/* Link
+--------------------------*/
+$--link-font-size: $--font-size-base !default;
+$--link-font-weight: $--font-weight-primary !default;
+$--link-default-font-color: $--color-text-regular !default;
+$--link-primary-font-color: $--color-primary !default;
+$--link-success-font-color: $--color-success !default;
+$--link-warning-font-color: $--color-warning !default;
+$--link-danger-font-color: $--color-danger !default;
+$--link-info-font-color: $--color-info !default;
+$--link-default-active-color: $--color-primary !default;
+$--link-disabled-font-color: $--color-text-placeholder !default;
 
 /* Main
 --------------------------*/
 $--main-padding: 20px !default;
-
-/* Footer
---------------------------*/
-$--footer-padding: 0 20px !default;
 
 /* Break-point
 --------------------------*/

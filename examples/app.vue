@@ -1,22 +1,11 @@
 <template>
   <div id="app">
-    <!-- <y-container>
-      <y-header>Header</y-header>
-      <y-aside width="200px">Aside</y-aside>
-      <y-main>Main</y-main>
-      <y-footer>Footer</y-footer>
-    </y-container> -->
-
-    <y-container>
-      <y-header>Header</y-header>
-      <y-container>
-        <y-aside width="200px">Aside</y-aside>
-        <y-container>
-          <y-main>Main</y-main>
-          <y-footer>Footer</y-footer>
-        </y-container>
-      </y-container>
-    </y-container>
+    <y-link disabled>默认链接</y-link>
+    <y-link type="primary" disabled>主要链接</y-link>
+    <y-link type="success" disabled>成功链接</y-link>
+    <y-link type="warning" disabled>警告链接</y-link>
+    <y-link type="danger" disabled>危险链接</y-link>
+    <y-link type="info" disabled>信息链接</y-link>
   </div>
 </template>
 
@@ -25,27 +14,3 @@ export default {
   name: 'app'
 }
 </script>
-
-<style lang="scss" scoped>
-.y-header,
-.y-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.y-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
-}
-
-.y-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-</style>
