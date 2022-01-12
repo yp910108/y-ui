@@ -3,6 +3,9 @@
 import Aside from '../packages/aside'
 import Button from '../packages/button'
 import ButtonGroup from '../packages/button-group'
+import Checkbox from '../packages/checkbox'
+import CheckboxButton from '../packages/checkbox-button'
+import CheckboxGroup from '../packages/checkbox-group'
 import Col from '../packages/col'
 import Container from '../packages/container'
 import Footer from '../packages/footer'
@@ -22,6 +25,9 @@ const components = [
   Aside,
   Button,
   ButtonGroup,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
   Col,
   Container,
   Footer,
@@ -59,6 +65,9 @@ export default {
   Aside,
   Button,
   ButtonGroup,
+  Checkbox,
+  CheckboxButton,
+  CheckboxGroup,
   Col,
   Container,
   Footer,
