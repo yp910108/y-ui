@@ -2,6 +2,7 @@
 
 import Aside from '../packages/aside'
 import Button from '../packages/button'
+import ButtonGroup from '../packages/button-group'
 import Col from '../packages/col'
 import Container from '../packages/container'
 import Footer from '../packages/footer'
@@ -20,6 +21,7 @@ import Row from '../packages/row'
 const components = [
   Aside,
   Button,
+  ButtonGroup,
   Col,
   Container,
   Footer,
@@ -56,6 +58,7 @@ export default {
   install,
   Aside,
   Button,
+  ButtonGroup,
   Col,
   Container,
   Footer,

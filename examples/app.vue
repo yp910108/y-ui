@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <y-form ref="form" :model="form" :rules="rules" label-width="180px">
-      <y-form-item prop="val" label="测试:">
-        <y-radio-group v-model="form.val">
-          <y-radio-button :label="1" />
-          <y-radio-button :label="2" />
-        </y-radio-group>
-      </y-form-item>
-    </y-form>
-    <y-button @click="handleClick">click</y-button>
-    <!-- <input v-model="val" type="radio" :value="1" />
-    <input v-model="val" type="radio" :value="2" />
-    <input v-model="val" type="radio" :value="3" /> -->
+    <y-button-group>
+      <y-button type="primary" icon="y-icon-arrow-left">上一页</y-button>
+      <y-button type="primary">下一页<i class="y-icon-arrow-right y-icon--right"></i></y-button>
+    </y-button-group>
+    <y-button-group>
+      <y-button type="primary" icon="y-icon-edit"></y-button>
+      <y-button type="primary" icon="y-icon-share"></y-button>
+      <y-button type="primary" icon="y-icon-delete"></y-button>
+    </y-button-group>
   </div>
 </template>
 
@@ -19,26 +16,8 @@
 export default {
   name: 'app',
   data() {
-    return {
-      form: {
-        val: undefined
-      },
-      rules: {
-        val: [{ required: true, message: '请选择' }]
-      }
-    }
+    return {}
   },
-  methods: {
-    validate() {
-      let pass = false
-      this.$refs.form.validate((valid) => {
-        pass = valid
-      })
-      return pass
-    },
-    handleClick() {
-      console.log(this.validate())
-    }
-  }
+  methods: {}
 }
 </script>
