@@ -12,6 +12,9 @@ import Icon from '../packages/icon'
 import Input from '../packages/input'
 import Link from '../packages/link'
 import Main from '../packages/main'
+import Radio from '../packages/radio'
+import RadioButton from '../packages/radio-button'
+import RadioGroup from '../packages/radio-group'
 import Row from '../packages/row'
 
 const components = [
@@ -27,6 +30,9 @@ const components = [
   Input,
   Link,
   Main,
+  Radio,
+  RadioButton,
+  RadioGroup,
   Row
 ]
 
@@ -60,5 +66,8 @@ export default {
   Input,
   Link,
   Main,
+  Radio,
+  RadioButton,
+  RadioGroup,
   Row
 }

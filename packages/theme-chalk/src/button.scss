@@ -69,11 +69,11 @@
     &,
     &:hover,
     &:focus {
-      color: $--button-disabled-font-color;
+      color: $--button-font-color-disabled;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-background-color;
-      border-color: $--button-disabled-border-color;
+      background-color: $--button-background-color-disabled;
+      border-color: $--button-border-color-disabled;
     }
 
     &.y-button--text {
@@ -85,8 +85,8 @@
       &:hover,
       &:focus {
         background-color: $--color-white;
-        border-color: $--button-disabled-border-color;
-        color: $--button-disabled-font-color;
+        border-color: $--button-border-color-disabled;
+        color: $--button-font-color-disabled;
       }
     }
   }

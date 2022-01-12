@@ -51,7 +51,7 @@ $typeMap: (
       border-color: $--link-default-active-color;
     }
     @include when(disabled) {
-      color: $--link-disabled-font-color;
+      color: $--link-font-color-disabled;
     }
   }
 

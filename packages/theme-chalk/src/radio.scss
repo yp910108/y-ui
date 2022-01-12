@@ -1,0 +1,187 @@
+@include b(radio) {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  line-height: 1;
+  font-weight: $--radio-font-weight;
+  font-size: $--font-size-base;
+  color: $--radio-font-color;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  @include utils-user-select(none);
+
+  @include when(bordered) {
+    box-sizing: border-box;
+    border-radius: $--border-radius-base;
+    border: $--border-base;
+    padding: $--radio-bordered-padding;
+    height: $--radio-bordered-height;
+    &.is-checked {
+      border-color: $--color-primary;
+    }
+    &.is-disabled {
+      border-color: $--border-color-lighter;
+      cursor: not-allowed;
+    }
+    & + .y-radio.is-bordered {
+      margin-left: 10px;
+    }
+  }
+
+  @include m(medium) {
+    &.is-bordered {
+      border-radius: $--button-border-radius-medium;
+      padding: $--radio-bordered-padding-medium;
+      height: $--radio-bordered-height-medium;
+      .y-radio__label {
+        font-size: $--button-font-size-medium;
+      }
+      .y-radio__inner {
+        width: $--radio-bordered-input-width-medium;
+        height: $--radio-bordered-input-height-medium;
+      }
+    }
+  }
+  @include m(small) {
+    &.is-bordered {
+      border-radius: $--button-border-radius-small;
+      padding: $--radio-bordered-padding-small;
+      height: $--radio-bordered-height-small;
+      .y-radio__label {
+        font-size: $--button-font-size-small;
+      }
+      .y-radio__inner {
+        width: $--radio-bordered-input-width-small;
+        height: $--radio-bordered-input-height-small;
+      }
+    }
+  }
+  @include m(mini) {
+    &.is-bordered {
+      border-radius: $--button-border-radius-mini;
+      padding: $--radio-bordered-padding-mini;
+      height: $--radio-bordered-height-mini;
+      .y-radio__label {
+        font-size: $--button-font-size-mini;
+      }
+      .y-radio__inner {
+        width: $--radio-bordered-input-width-mini;
+        height: $--radio-bordered-input-height-mini;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include e(input) {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+
+    @include when(disabled) {
+      .y-radio__inner {
+        border-color: $--radio-input-border-color-disabled;
+        background-color: $--radio-input-background-color-disabled;
+        cursor: not-allowed;
+
+        &::after {
+          background-color: $--radio-icon-color-disabled;
+          cursor: not-allowed;
+        }
+
+        & + .y-radio__label {
+          cursor: not-allowed;
+        }
+      }
+      &.is-checked {
+        .y-radio__inner {
+          border-color: $--radio-checked-input-border-color-disabled;
+          background-color: $--radio-checked-input-background-color-disabled;
+          &::after {
+            background-color: $--radio-checked-icon-color-disabled;
+          }
+        }
+      }
+      & + span.y-radio__label {
+        color: $--color-text-placeholder;
+        cursor: not-allowed;
+      }
+    }
+
+    @include when(checked) {
+      .y-radio__inner {
+        border-color: $--radio-checked-input-border-color;
+        background-color: $--radio-checked-icon-color;
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+      & + .y-radio__label {
+        color: $--radio-checked-font-color;
+      }
+    }
+
+    @include when(focus) {
+      .y-radio__inner {
+        border-color: $--radio-input-border-color-hover;
+      }
+    }
+  }
+  @include e(inner) {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: $--radio-input-border;
+    border-radius: $--radio-input-border-radius;
+    width: $--radio-input-width;
+    height: $--radio-input-height;
+    background-color: $--radio-input-background-color;
+    cursor: pointer;
+    &:hover {
+      border-color: $--radio-input-border-color-hover;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: $--radio-input-border-radius;
+      width: 4px;
+      height: 4px;
+      background-color: $--color-white;
+      transition: transform 0.15s ease-in;
+    }
+  }
+
+  @include e(original) {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+  }
+
+  &:focus:not(.is-focus):not(:active):not(.is-disabled) {
+    /*获得焦点时 样式提醒*/
+    .y-radio__inner {
+      box-shadow: 0 0 2px 2px $--radio-input-border-color-hover;
+    }
+  }
+
+  @include e(label) {
+    padding-left: 10px;
+    font-size: $--radio-font-size;
+  }
+}

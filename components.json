@@ -11,5 +11,8 @@
   "input": "./packages/input/index.js",
   "link": "./packages/link/index.js",
   "main": "./packages/main/index.js",
+  "radio": "./packages/radio/index.js",
+  "radio-button": "./packages/radio-button/index.js",
+  "radio-group": "./packages/radio-group/index.js",
   "row": "./packages/row/index.js"
 }
