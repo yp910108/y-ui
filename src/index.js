@@ -14,6 +14,7 @@ import FormItem from '../packages/form-item'
 import Header from '../packages/header'
 import Icon from '../packages/icon'
 import Input from '../packages/input'
+import InputNumber from '../packages/input-number'
 import Link from '../packages/link'
 import Main from '../packages/main'
 import Radio from '../packages/radio'
@@ -36,6 +37,7 @@ const components = [
   Header,
   Icon,
   Input,
+  InputNumber,
   Link,
   Main,
   Radio,
@@ -76,6 +78,7 @@ export default {
   Header,
   Icon,
   Input,
+  InputNumber,
   Link,
   Main,
   Radio,
