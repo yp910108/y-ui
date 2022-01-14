@@ -20,7 +20,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "async-validator": "~1.8.1"
+    "async-validator": "~1.8.1",
+    "throttle-debounce": "^1.0.1"
   },
   "peerDependencies": {
     "vue": "^2.5.17"

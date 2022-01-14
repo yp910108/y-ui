@@ -254,6 +254,17 @@ $--radio-button-checked-background-color: $--color-primary !default;
 $--radio-button-checked-background-color-disabled: $--border-color-extra-light !default;
 $--radio-button-checked-font-color: $--color-white !default;
 
+/* Tag 未整理
+-------------------------- */
+$--tag-info-color: $--color-info !default;
+$--tag-primary-color: $--color-primary !default;
+$--tag-success-color: $--color-success !default;
+$--tag-warning-color: $--color-warning !default;
+$--tag-danger-color: $--color-danger !default;
+$--tag-font-size: 12px !default;
+$--tag-border-radius: 4px !default;
+$--tag-padding: 0 10px !default;
+
 /* Break-point
 --------------------------*/
 $--sm: 768px !default;

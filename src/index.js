@@ -21,6 +21,8 @@ import Radio from '../packages/radio'
 import RadioButton from '../packages/radio-button'
 import RadioGroup from '../packages/radio-group'
 import Row from '../packages/row'
+import Select from '../packages/select'
+import Tag from '../packages/tag'
 
 const components = [
   Aside,
@@ -43,7 +45,9 @@ const components = [
   Radio,
   RadioButton,
   RadioGroup,
-  Row
+  Row,
+  Select,
+  Tag
 ]
 
 const install = function (Vue, opts = {}) {
@@ -84,5 +88,7 @@ export default {
   Radio,
   RadioButton,
   RadioGroup,
-  Row
+  Row,
+  Select,
+  Tag
 }

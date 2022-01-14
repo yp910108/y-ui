@@ -8,9 +8,6 @@
 export default {
   name: 'YHeader',
   props: {
-    direction: String
-  },
-  props: {
     height: {
       type: String,
       default: '60px'
