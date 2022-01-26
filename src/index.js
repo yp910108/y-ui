@@ -21,6 +21,7 @@ import Radio from '../packages/radio'
 import RadioButton from '../packages/radio-button'
 import RadioGroup from '../packages/radio-group'
 import Row from '../packages/row'
+import Scrollbar from '../packages/scrollbar'
 import Select from '../packages/select'
 import Tag from '../packages/tag'
 
@@ -46,6 +47,7 @@ const components = [
   RadioButton,
   RadioGroup,
   Row,
+  Scrollbar,
   Select,
   Tag
 ]
@@ -89,6 +91,7 @@ export default {
   RadioButton,
   RadioGroup,
   Row,
+  Scrollbar,
   Select,
   Tag
 }

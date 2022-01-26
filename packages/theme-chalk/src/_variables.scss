@@ -254,6 +254,11 @@ $--radio-button-checked-background-color: $--color-primary !default;
 $--radio-button-checked-background-color-disabled: $--border-color-extra-light !default;
 $--radio-button-checked-font-color: $--color-white !default;
 
+/* Scrollbar 未整理
+--------------------------*/
+$--scrollbar-background-color: rgba($--color-text-secondary, 0.3) !default;
+$--scrollbar-hover-background-color: rgba($--color-text-secondary, 0.5) !default;
+
 /* Tag 未整理
 -------------------------- */
 $--tag-info-color: $--color-info !default;

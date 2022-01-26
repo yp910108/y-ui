@@ -20,6 +20,7 @@
   "radio-button": "./packages/radio-button/index.js",
   "radio-group": "./packages/radio-group/index.js",
   "row": "./packages/row/index.js",
+  "scrollbar": "./packages/scrollbar/index.js",
   "select": "./packages/select/index.js",
   "tag": "./packages/tag/index.js"
 }

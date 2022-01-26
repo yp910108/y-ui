@@ -1,18 +1,56 @@
 <template>
   <div id="app">
-    <y-tag v-for="tag in dynamicTags" :key="tag" closable @close="handleClose(tag)">
-      {{ tag }}
-    </y-tag>
-    <y-input
-      v-if="inputVisible"
-      v-model="inputValue"
-      ref="saveTagInput"
-      size="small"
-      class="input-new-tag"
-      @keyup.enter.native="handleInputConfirm"
-      @blur="handleInputConfirm"
-    />
-    <y-button v-else size="small" class="button-new-tag" @click="showInput">+ New Tag</y-button>
+    <!-- <div style="width: 300px; height: 300px; overflow: auto">
+      <div style="width: 600px; height: 600px"></div>
+    </div> -->
+    <y-scrollbar>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+      <div>sdfdsfsdf</div>
+    </y-scrollbar>
   </div>
 </template>
 
@@ -20,48 +58,36 @@
 export default {
   name: 'app',
   data() {
-    return {
-      dynamicTags: ['标签一', '标签二', '标签三'],
-      inputVisible: false,
-      inputValue: ''
-    }
+    return {}
   },
-  methods: {
-    handleClose(tag) {
-      this.dynamicTags.splice(this.dynamicTags.indexOf(tag), 1)
-    },
-    showInput() {
-      this.inputVisible = true
-      this.$nextTick((_) => {
-        this.$refs.saveTagInput.$refs.input.focus()
-      })
-    },
-    handleInputConfirm() {
-      let inputValue = this.inputValue
-      if (inputValue) {
-        this.dynamicTags.push(inputValue)
-      }
-      this.inputVisible = false
-      this.inputValue = ''
-    }
-  }
+  methods: {}
 }
 </script>
 
 <style lang="scss" scoped>
-.y-tag + .y-tag {
-  margin-left: 10px;
+.y-scrollbar {
+  width: 300px;
+  height: 300px;
 }
-.button-new-tag {
-  margin-left: 10px;
-  height: 32px;
-  line-height: 30px;
-  padding-top: 0;
-  padding-bottom: 0;
+</style>
+
+<style>
+/* ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
-.input-new-tag {
-  width: 90px;
-  margin-left: 10px;
-  vertical-align: bottom;
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+  border-radius: 5px;
 }
+::-webkit-scrollbar-thumb {
+  background: #9093994d;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #90939980;
+}
+::-webkit-scrollbar-corner {
+  background: #f6f6f6;
+} */
 </style>
