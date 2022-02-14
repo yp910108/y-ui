@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Tyhjennä'
@@ -120,4 +120,4 @@ export default {
       description: 'Ei tietoja'
     }
   }
-};
+}

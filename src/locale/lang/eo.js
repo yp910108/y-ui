@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Bone',
       clear: 'Malplenigi'
@@ -120,4 +120,4 @@ export default {
       description: 'Neniuj datumoj'
     }
   }
-};
+}

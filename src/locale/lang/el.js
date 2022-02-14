@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Εντάξει',
       clear: 'Καθαρισμός'
@@ -120,4 +120,4 @@ export default {
       description: 'Χωρίς Δεδομένα'
     }
   }
-};
+}

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'אישור',
       clear: 'נקה'
@@ -120,4 +120,4 @@ export default {
       description: 'אין נתונים'
     }
   }
-};
+}

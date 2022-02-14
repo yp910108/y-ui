@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Pilih',
       clear: 'Kosongkan'
@@ -120,4 +120,4 @@ export default {
       description: 'Tidak ada data'
     }
   }
-};
+}

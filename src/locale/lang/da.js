@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Ryd'
@@ -119,4 +119,4 @@ export default {
       description: 'Ingen data'
     }
   }
-};
+}

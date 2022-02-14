@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Onayla',
       clear: 'Temizle'
@@ -120,4 +120,4 @@ export default {
       description: 'Veri yok'
     }
   }
-};
+}

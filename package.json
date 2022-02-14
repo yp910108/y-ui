@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "async-validator": "~1.8.1",
+    "deepmerge": "^1.5.2",
     "resize-observer-polyfill": "^1.5.0",
     "throttle-debounce": "^1.0.1"
   },

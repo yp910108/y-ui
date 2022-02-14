@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Labi',
       clear: 'Notīrīt'
@@ -120,4 +120,4 @@ export default {
       description: 'Nav datu'
     }
   }
-};
+}

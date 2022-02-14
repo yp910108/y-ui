@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: '确定',
       clear: '清空'
@@ -120,4 +120,4 @@ export default {
       description: '暂无数据'
     }
   }
-};
+}

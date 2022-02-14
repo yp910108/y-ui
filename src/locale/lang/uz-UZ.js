@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Qabul qilish',
       clear: 'Tozalash'
@@ -120,4 +120,4 @@ export default {
       description: 'Boʻsh'
     }
   }
-};
+}

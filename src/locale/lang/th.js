@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'ตกลง',
       clear: 'ล้างข้อมูล'
@@ -120,4 +120,4 @@ export default {
       description: 'ไม่พบข้อมูล'
     }
   }
-};
+}

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: '확인',
       clear: '초기화'
@@ -120,4 +120,4 @@ export default {
       description: '데이터 없음'
     }
   }
-};
+}

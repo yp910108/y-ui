@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'باشد',
       clear: 'حذف'
@@ -120,4 +120,4 @@ export default {
       description: 'اطلاعاتی وجود ندارد'
     }
   }
-};
+}

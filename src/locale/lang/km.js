@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'យល់ព្រម',
       clear: 'លុប'
@@ -120,4 +120,4 @@ export default {
       description: 'គ្មានទិន្ន័យ'
     }
   }
-};
+}

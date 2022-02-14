@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'موافق',
       clear: 'إزالة'
@@ -119,4 +119,4 @@ export default {
       description: 'لايوجد بيانات'
     }
   }
-};
+}

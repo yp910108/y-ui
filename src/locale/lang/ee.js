@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Tühjenda'
@@ -120,4 +120,4 @@ export default {
       description: 'Andmed puuduvad'
     }
   }
-};
+}

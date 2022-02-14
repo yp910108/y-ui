@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'உறுதி செய்',
       clear: 'தெளிவாக்கு'
@@ -119,4 +119,4 @@ export default {
       description: 'தரவு இல்லை'
     }
   }
-};
+}

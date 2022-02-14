@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Мурунку',
       clear: 'ачык'
@@ -120,4 +120,4 @@ export default {
       description: 'маалымат жок'
     }
   }
-};
+}

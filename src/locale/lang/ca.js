@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Confirmar',
       clear: 'Netejar'
@@ -119,4 +119,4 @@ export default {
       description: 'Sense Dades'
     }
   }
-};
+}

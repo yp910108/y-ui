@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Valyti'
@@ -120,4 +120,4 @@ export default {
       description: 'Duomenų nerasta'
     }
   }
-};
+}

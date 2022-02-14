@@ -1,0 +1,30 @@
+@include b(select-dropdown) {
+  @include e(item) {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: $--select-option-height;
+    line-height: $--select-option-height;
+    font-size: $--select-font-size;
+    color: $--select-option-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    @include when(disabled) {
+      color: $--select-option-disabled-color;
+      cursor: not-allowed;
+      &:hover {
+        background-color: $--color-white;
+      }
+    }
+    &.hover,
+    &:hover {
+      background-color: $--select-option-hover-background;
+    }
+    &.selected {
+      font-weight: bold;
+      color: $--select-option-selected-font-color;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Zmazať'
@@ -122,4 +122,4 @@ export default {
       description: 'Žiadne dáta'
     }
   }
-};
+}

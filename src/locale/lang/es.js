@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Confirmar',
       clear: 'Despejar'
@@ -119,4 +119,4 @@ export default {
       description: 'Sin Datos'
     }
   }
-};
+}

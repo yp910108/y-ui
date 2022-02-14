@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Ados',
       clear: 'Garbitu'
@@ -120,4 +120,4 @@ export default {
       description: 'Daturik ez'
     }
   }
-};
+}

@@ -100,7 +100,7 @@
 
 <script>
 import emitter from 'main/mixins/emitter'
-import Migrating from 'main/mixins/migrating'
+import migrating from 'main/mixins/migrating'
 import calcTextareaHeight from './calcTextareaHeight'
 import merge from 'main/utils/merge'
 import { isKorean } from 'main/utils/shared'
@@ -108,7 +108,7 @@ import { isKorean } from 'main/utils/shared'
 export default {
   name: 'YInput',
   inheritAttrs: false,
-  mixins: [emitter, Migrating],
+  mixins: [emitter, migrating],
   inject: {
     yForm: {
       default: () => ({})

@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Șterge'
@@ -120,4 +120,4 @@ export default {
       description: 'Nu există date'
     }
   }
-};
+}

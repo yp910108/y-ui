@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Լաւ',
       clear: 'Մաքրել'
@@ -120,4 +120,4 @@ export default {
       description: 'Տուեալներ չկան'
     }
   }
-};
+}

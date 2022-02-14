@@ -18,6 +18,7 @@ $--color-success: #67c23a !default;
 $--color-warning: #e6a23c !default;
 $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
+$--color-text-primary: #303133 !default;
 $--color-text-regular: #606266 !default;
 $--color-text-secondary: #909399 !default;
 $--color-text-placeholder: #c0c4cc !default;
@@ -51,6 +52,11 @@ $--border-color-extra-light: #f2f6fc !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 $--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
+// Box-shadow
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+
 /* Fill
 -------------------------- */
 $--fill-base: $--color-white !default;
@@ -70,6 +76,7 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 /* z-index
 -------------------------- */
 $--index-normal: 1 !default;
+$--index-top: 1000 !default;
 
 /* Button
 -------------------------- */
@@ -205,6 +212,17 @@ $--link-font-color-disabled: $--color-text-placeholder !default;
 --------------------------*/
 $--main-padding: 20px !default;
 
+/* Popover 未整理
+-------------------------- */
+$--popover-background-color: $--color-white !default;
+$--popover-font-size: $--font-size-base !default;
+$--popover-border-color: $--border-color-lighter !default;
+$--popover-arrow-size: 6px !default;
+$--popover-padding: 12px !default;
+$--popover-padding-large: 18px 20px !default;
+$--popover-title-font-size: 16px !default;
+$--popover-title-font-color: $--color-text-primary !default;
+
 /* Radio
 -------------------------- */
 $--radio-font-weight: $--font-weight-primary !default;
@@ -259,6 +277,38 @@ $--radio-button-checked-font-color: $--color-white !default;
 $--scrollbar-background-color: rgba($--color-text-secondary, 0.3) !default;
 $--scrollbar-hover-background-color: rgba($--color-text-secondary, 0.5) !default;
 
+/* Select 未整理
+-------------------------- */
+$--select-border-color-hover: $--border-color-hover !default;
+$--select-disabled-border: $--disabled-border-color-base !default;
+$--select-font-size: $--font-size-base !default;
+$--select-close-hover-color: $--color-text-secondary !default;
+
+$--select-input-color: $--color-text-placeholder !default;
+$--select-multiple-input-color: #666 !default;
+$--select-input-focus-border-color: $--color-primary !default;
+$--select-input-font-size: 14px !default;
+
+$--select-option-color: $--color-text-regular !default;
+$--select-option-disabled-color: $--color-text-placeholder !default;
+$--select-option-disabled-background: $--color-white !default;
+$--select-option-height: 34px !default;
+$--select-option-hover-background: $--background-color-base !default;
+$--select-option-selected-font-color: $--color-primary !default;
+$--select-option-selected-hover: $--background-color-base !default;
+
+$--select-group-color: $--color-info !default;
+$--select-group-height: 30px !default;
+$--select-group-font-size: 12px !default;
+
+$--select-dropdown-background: $--color-white !default;
+$--select-dropdown-shadow: $--box-shadow-light !default;
+$--select-dropdown-empty-color: #999 !default;
+$--select-dropdown-max-height: 274px !default;
+$--select-dropdown-padding: 6px 0 !default;
+$--select-dropdown-empty-padding: 10px 0 !default;
+$--select-dropdown-border: solid 1px $--border-color-light !default;
+
 /* Tag 未整理
 -------------------------- */
 $--tag-info-color: $--color-info !default;
@@ -269,6 +319,20 @@ $--tag-danger-color: $--color-danger !default;
 $--tag-font-size: 12px !default;
 $--tag-border-radius: 4px !default;
 $--tag-padding: 0 10px !default;
+
+/* Tooltip 未整理
+-------------------------- */
+/// color|1|Color|0
+$--tooltip-fill: $--color-text-primary !default;
+/// color|1|Color|0
+$--tooltip-color: $--color-white !default;
+/// fontSize||Font|1
+$--tooltip-font-size: 12px !default;
+/// color||Color|0
+$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-arrow-size: 6px !default;
+/// padding||Spacing|3
+$--tooltip-padding: 10px !default;
 
 /* Break-point
 --------------------------*/

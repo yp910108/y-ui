@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Temam',
       clear: 'Paqij bike'
@@ -120,4 +120,4 @@ export default {
       description: 'Agahî tune'
     }
   }
-};
+}

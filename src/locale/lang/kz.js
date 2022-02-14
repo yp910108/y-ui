@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Қабылдау',
       clear: 'Тазалау'
@@ -120,4 +120,4 @@ export default {
       description: 'Деректер жоқ'
     }
   }
-};
+}

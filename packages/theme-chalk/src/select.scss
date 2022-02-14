@@ -1,0 +1,186 @@
+@import './popper';
+
+@include b(select-dropdown) {
+  position: absolute;
+  z-index: #{$--index-top + 1};
+  margin: 5px 0;
+  border: $--select-dropdown-border;
+  border-radius: $--border-radius-base;
+  box-sizing: border-box;
+  box-shadow: $--select-dropdown-shadow;
+  background-color: $--select-dropdown-background;
+  @include when(multiple) {
+    & .y-select-dropdown__item {
+      padding-right: 40px;
+    }
+    & .y-select-dropdown__item.selected {
+      background-color: $--select-dropdown-background;
+      color: $--select-option-selected-font-color;
+      &.hover {
+        background-color: $--select-option-hover-background;
+      }
+      &::after {
+        content: '\e6da';
+        position: absolute;
+        right: 20px;
+        font-family: 'y-icons';
+        font-weight: bold;
+        font-size: 12px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+  .y-scrollbar.is-empty .y-select-dropdown__list {
+    padding: 0;
+  }
+}
+
+@include b(select-dropdown__empty) {
+  margin: 0;
+  padding: $--select-dropdown-empty-padding;
+  text-align: center;
+  font-size: $--select-font-size;
+  color: $--select-dropdown-empty-color;
+}
+
+@include b(select-dropdown__wrap) {
+  max-height: $--select-dropdown-max-height;
+}
+
+@include b(select-dropdown__list) {
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: $--select-dropdown-padding;
+}
+
+@include b(select) {
+  position: relative;
+  display: inline-block;
+  .y-select__tags > span {
+    display: contents;
+  }
+  &:hover {
+    .y-input__inner {
+      border-color: $--select-border-color-hover;
+    }
+  }
+
+  .y-input__inner {
+    cursor: pointer;
+    padding-right: 35px;
+    &:focus {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  .y-input {
+    & .y-select__caret {
+      transform: rotateZ(180deg);
+      transition: transform 0.3s;
+      font-size: $--select-input-font-size;
+      color: $--select-input-color;
+      cursor: pointer;
+      @include when(reverse) {
+        transform: rotateZ(0deg);
+      }
+      @include when(show-close) {
+        transform: rotateZ(180deg);
+        transition: $--color-transition-base;
+        border-radius: $--border-radius-circle;
+        text-align: center;
+        font-size: $--select-font-size;
+        color: $--select-input-color;
+        &:hover {
+          color: $--select-close-hover-color;
+        }
+      }
+    }
+
+    &.is-disabled {
+      & .y-input__inner {
+        cursor: not-allowed;
+        &:hover {
+          border-color: $--select-disabled-border;
+        }
+      }
+    }
+    &.is-focus .y-input__inner {
+      border-color: $--select-input-focus-border-color;
+    }
+  }
+
+  > .y-input {
+    display: block;
+  }
+
+  @include e(input) {
+    margin-left: 15px;
+    border: none;
+    padding: 0;
+    height: 28px;
+    font-size: $--select-font-size;
+    background-color: transparent;
+    color: $--select-multiple-input-color;
+    outline: none;
+    appearance: none;
+    @include when(mini) {
+      height: 14px;
+    }
+  }
+
+  @include e(close) {
+    position: absolute;
+    z-index: $--index-top;
+    top: 8px;
+    right: 25px;
+    line-height: 18px;
+    font-size: $--select-input-font-size;
+    color: $--select-input-color;
+    cursor: pointer;
+    &:hover {
+      color: $--select-close-hover-color;
+    }
+  }
+
+  @include e(tags) {
+    position: absolute;
+    z-index: $--index-normal;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: normal;
+    white-space: normal;
+  }
+
+  @include e(tags-text) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .y-tag {
+    display: flex;
+    align-items: center;
+    margin: 2px 0 2px 6px;
+    box-sizing: border-box;
+    max-width: 100%;
+    border-color: transparent;
+    background-color: #f0f2f5;
+    &__close.y-icon-close {
+      top: 0;
+      flex-shrink: 0;
+      background-color: $--color-text-placeholder;
+      color: $--color-white;
+      &:hover {
+        background-color: $--color-text-secondary;
+      }
+      &::before {
+        display: block;
+        transform: translate(0, 0.5px);
+      }
+    }
+  }
+}

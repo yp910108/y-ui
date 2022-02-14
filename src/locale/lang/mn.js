@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Тийм',
       clear: 'Цэвэрлэх'
@@ -120,4 +120,4 @@ export default {
       description: 'Өгөгдөл байхгүй'
     }
   }
-};
+}

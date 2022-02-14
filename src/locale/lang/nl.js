@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'Bevestig',
       clear: 'Wissen'
@@ -120,4 +120,4 @@ export default {
       description: 'Geen data'
     }
   }
-};
+}

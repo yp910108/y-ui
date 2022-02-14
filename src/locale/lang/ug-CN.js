@@ -1,5 +1,5 @@
 export default {
-  el: {
+  y: {
     colorpicker: {
       confirm: 'جەزملەش',
       clear: 'قۇرۇقداش'
@@ -120,4 +120,4 @@ export default {
       description: 'ئۇچۇر يوق'
     }
   }
-};
+}
