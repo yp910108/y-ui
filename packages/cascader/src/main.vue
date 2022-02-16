@@ -545,7 +545,7 @@ export default {
         }
         this.$emit('input', val)
         this.$emit('change', val)
-        this.dispatch('YFormItem', 'y.form.change', [val])
+        this.dispatch('YFormItem', 'y.form.change', val)
       }
     },
     options: {

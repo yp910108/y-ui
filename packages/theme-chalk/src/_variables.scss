@@ -323,6 +323,16 @@ $--select-dropdown-padding: 6px 0 !default;
 $--select-dropdown-empty-padding: 10px 0 !default;
 $--select-dropdown-border: solid 1px $--border-color-light !default;
 
+/* Switch 未整理
+-------------------------- */
+$--switch-on-color: $--color-primary !default;
+$--switch-off-color: $--border-color-base !default;
+$--switch-font-size: $--font-size-base !default;
+$--switch-core-border-radius: 10px !default;
+$--switch-width: 40px !default;
+$--switch-height: 20px !default;
+$--switch-button-size: 16px !default;
+
 /* Tag 未整理
 -------------------------- */
 $--tag-info-color: $--color-info !default;

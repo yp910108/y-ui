@@ -28,6 +28,7 @@ import RadioGroup from '../packages/radio-group'
 import Row from '../packages/row'
 import Scrollbar from '../packages/scrollbar'
 import Select from '../packages/select'
+import Switch from '../packages/switch'
 import Tag from '../packages/tag'
 
 const components = [
@@ -58,6 +59,7 @@ const components = [
   Row,
   Scrollbar,
   Select,
+  Switch,
   Tag
 ]
 
@@ -111,5 +113,6 @@ export default {
   Row,
   Scrollbar,
   Select,
+  Switch,
   Tag
 }
