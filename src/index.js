@@ -4,6 +4,8 @@ import locale from './locale'
 import Aside from '../packages/aside'
 import Button from '../packages/button'
 import ButtonGroup from '../packages/button-group'
+import Cascader from '../packages/cascader'
+import CascaderPanel from '../packages/cascader-panel'
 import Checkbox from '../packages/checkbox'
 import CheckboxButton from '../packages/checkbox-button'
 import CheckboxGroup from '../packages/checkbox-group'
@@ -32,6 +34,8 @@ const components = [
   Aside,
   Button,
   ButtonGroup,
+  Cascader,
+  CascaderPanel,
   Checkbox,
   CheckboxButton,
   CheckboxGroup,
@@ -83,6 +87,8 @@ export default {
   Aside,
   Button,
   ButtonGroup,
+  Cascader,
+  CascaderPanel,
   Checkbox,
   CheckboxButton,
   CheckboxGroup,

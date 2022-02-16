@@ -19,7 +19,6 @@ export default {
     fill: String,
     textColor: String
   },
-
   watch: {
     value(value) {
       this.dispatch('YFormItem', 'y.form.change', value)

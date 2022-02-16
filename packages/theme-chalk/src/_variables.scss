@@ -121,6 +121,20 @@ $--button-font-color-disabled: $--color-text-placeholder !default;
 $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
 
+/* Cascader 未整理
+-------------------------- */
+$--cascader-menu-font-color: $--color-text-regular !default;
+$--cascader-menu-selected-font-color: $--color-primary !default;
+$--cascader-menu-fill: $--fill-base !default;
+$--cascader-menu-font-size: $--font-size-base !default;
+$--cascader-menu-radius: $--border-radius-base !default;
+$--cascader-menu-border: solid 1px $--border-color-light !default;
+$--cascader-menu-shadow: $--box-shadow-light !default;
+$--cascader-node-background-hover: $--background-color-base !default;
+$--cascader-node-color-disabled: $--color-text-placeholder !default;
+$--cascader-color-empty: $--color-text-placeholder !default;
+$--cascader-tag-background: #f0f2f5;
+
 /* Checkbox 未整理
 -------------------------- */
 $--checkbox-font-size: 14px !default;
@@ -322,16 +336,11 @@ $--tag-padding: 0 10px !default;
 
 /* Tooltip 未整理
 -------------------------- */
-/// color|1|Color|0
 $--tooltip-fill: $--color-text-primary !default;
-/// color|1|Color|0
 $--tooltip-color: $--color-white !default;
-/// fontSize||Font|1
 $--tooltip-font-size: 12px !default;
-/// color||Color|0
 $--tooltip-border-color: $--color-text-primary !default;
 $--tooltip-arrow-size: 6px !default;
-/// padding||Spacing|3
 $--tooltip-padding: 10px !default;
 
 /* Break-point

@@ -136,8 +136,8 @@ import emitter from 'main/mixins/emitter'
 import clickoutside from 'main/directives/clickoutside'
 import YInput from 'packages/input'
 import YScrollbar from 'packages/scrollbar'
-import YSelectMenu from './select-dropdown'
 import YOption from 'packages/option'
+import YSelectMenu from './select-dropdown'
 import navigationMixin from './navigation-mixin'
 
 export default {
