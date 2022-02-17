@@ -30,6 +30,7 @@ import Scrollbar from '../packages/scrollbar'
 import Select from '../packages/select'
 import Switch from '../packages/switch'
 import Tag from '../packages/tag'
+import Tooltip from '../packages/tooltip'
 
 const components = [
   Aside,
@@ -60,7 +61,8 @@ const components = [
   Scrollbar,
   Select,
   Switch,
-  Tag
+  Tag,
+  Tooltip
 ]
 
 const install = function (Vue, opts = {}) {
@@ -114,5 +116,6 @@ export default {
   Scrollbar,
   Select,
   Switch,
-  Tag
+  Tag,
+  Tooltip
 }

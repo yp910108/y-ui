@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     {{ value }}
-    <y-switch v-model="value" active-color="#13ce66" inactive-color="#ff4949" />
+    <y-tooltip :value="true" content="Top center" placement="top" manual>
+      <y-button>Dark</y-button>
+    </y-tooltip>
   </div>
 </template>
 

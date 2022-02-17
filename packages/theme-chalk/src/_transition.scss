@@ -20,3 +20,13 @@
   opacity: 0;
   transform: scaleY(0);
 }
+
+.y-fade-in-linear-enter-active,
+.y-fade-in-linear-leave-active {
+  transition: $--fade-linear-transition;
+}
+.y-fade-in-linear-enter,
+.y-fade-in-linear-leave,
+.y-fade-in-linear-leave-active {
+  opacity: 0;
+}
