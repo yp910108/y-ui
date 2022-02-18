@@ -26,6 +26,7 @@
   "row": "./packages/row/index.js",
   "scrollbar": "./packages/scrollbar/index.js",
   "select": "./packages/select/index.js",
+  "slider": "./packages/slider/index.js",
   "switch": "./packages/switch/index.js",
   "tag": "./packages/tag/index.js",
   "tooltip": "./packages/tooltip/index.js"

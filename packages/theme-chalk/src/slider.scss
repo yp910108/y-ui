@@ -1,0 +1,214 @@
+@include b(slider) {
+  @include utils-clearfix;
+  @include e(runway) {
+    position: relative;
+    vertical-align: middle;
+    margin: $--slider-margin;
+    border-radius: $--slider-border-radius;
+    width: 100%;
+    height: $--slider-height;
+    background-color: $--slider-runway-background-color;
+    cursor: pointer;
+    &.show-input {
+      margin-right: 160px;
+      width: auto;
+    }
+    &.disabled {
+      cursor: default;
+      .y-slider__bar {
+        background-color: $--slider-disable-color;
+      }
+      .y-slider__button {
+        border-color: $--slider-disable-color;
+      }
+      .y-slider__button-wrapper {
+        &:hover,
+        &.hover {
+          cursor: not-allowed;
+        }
+        &.dragging {
+          cursor: not-allowed;
+        }
+      }
+      .y-slider__button {
+        &:hover,
+        &.hover,
+        &.dragging {
+          transform: scale(1);
+        }
+        &:hover,
+        &.hover {
+          cursor: not-allowed;
+        }
+        &.dragging {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  @include e(input) {
+    float: right;
+    margin-top: 3px;
+    width: 130px;
+    &.y-input-number--mini {
+      margin-top: 5px;
+    }
+    &.y-input-number--medium {
+      margin-top: 0;
+    }
+    &.y-input-number--large {
+      margin-top: -2px;
+    }
+  }
+  @include e(bar) {
+    position: absolute;
+    border-top-left-radius: $--slider-border-radius;
+    border-bottom-left-radius: $--slider-border-radius;
+    height: $--slider-height;
+    background-color: $--slider-main-background-color;
+  }
+  @include e(button-wrapper) {
+    position: absolute;
+    z-index: 1001;
+    top: $--slider-button-wrapper-offset;
+    height: $--slider-button-wrapper-size;
+    width: $--slider-button-wrapper-size;
+    line-height: normal;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: transparent;
+    user-select: none;
+    @include utils-vertical-center;
+    .y-tooltip {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:hover,
+    &.hover {
+      cursor: grab;
+    }
+    &.dragging {
+      cursor: grabbing;
+    }
+  }
+  @include e(button) {
+    border: solid 2px $--slider-main-background-color;
+    border-radius: 50%;
+    width: $--slider-button-size;
+    height: $--slider-button-size;
+    background-color: $--color-white;
+    transition: 0.2s;
+    user-select: none;
+    &:hover,
+    &.hover,
+    &.dragging {
+      transform: scale(1.2);
+    }
+    &:hover,
+    &.hover {
+      cursor: grab;
+    }
+    &.dragging {
+      cursor: grabbing;
+    }
+  }
+
+  @include e(stop) {
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: $--border-radius-circle;
+    height: $--slider-height;
+    width: $--slider-height;
+    background-color: $--slider-stop-background-color;
+  }
+  @include e(marks) {
+    top: 0;
+    left: 12px;
+    width: 18px;
+    height: 100%;
+    @include e(marks-text) {
+      position: absolute;
+      transform: translateX(-50%);
+      margin-top: 15px;
+      font-size: 14px;
+      color: $--color-info;
+    }
+  }
+  @include when(vertical) {
+    position: relative;
+    .y-slider__runway {
+      margin: 0 16px;
+      width: $--slider-height;
+      height: 100%;
+    }
+    .y-slider__bar {
+      border-radius: 0 0 3px 3px;
+      width: $--slider-height;
+      height: auto;
+    }
+    .y-slider__button-wrapper {
+      left: $--slider-button-wrapper-offset;
+      top: auto;
+      transform: translateY(50%);
+    }
+    .y-slider__stop {
+      transform: translateY(50%);
+    }
+    &.y-slider--with-input {
+      padding-bottom: #{$--input-height-medium + 22px};
+      .y-slider__input {
+        position: absolute;
+        bottom: 22px;
+        float: none;
+        margin-top: 15px;
+        width: 36px;
+        overflow: visible;
+        .y-input__inner {
+          padding-left: 5px;
+          padding-right: 5px;
+          text-align: center;
+        }
+        .y-input-number__decrease,
+        .y-input-number__increase {
+          top: $--input-height-small;
+          margin-top: -1px;
+          border: $--input-border;
+          box-sizing: border-box;
+          line-height: 20px;
+          transition: $--border-transition-base;
+        }
+        .y-input-number__decrease {
+          border-bottom-left-radius: $--input-border-radius;
+          width: 18px;
+          right: 18px;
+        }
+        .y-input-number__increase {
+          border-bottom-right-radius: $--input-border-radius;
+          width: 19px;
+          & ~ .y-input .y-input__inner {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        &:hover {
+          .y-input-number__decrease,
+          .y-input-number__increase {
+            border-color: $--input-border-color-hover;
+          }
+        }
+        &:active {
+          .y-input-number__decrease,
+          .y-input-number__increase {
+            border-color: $--input-border-color-focus;
+          }
+        }
+      }
+    }
+
+    @include e(marks-text) {
+      left: 15px;
+      margin-top: 0;
+      transform: translateY(50%);
+    }
+  }
+}

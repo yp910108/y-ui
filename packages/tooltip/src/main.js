@@ -144,6 +144,12 @@ export default {
       this.popperVM.node = (
         <transition name={this.transition} onAfterLeave={this.doDestroy}>
           <div
+            ref="popper"
+            v-show={!this.disabled && this.showPopper}
+            role="tooltip"
+            id={this.tooltipId}
+            aria-hidden={this.disabled || !this.showPopper ? 'true' : 'false'}
+            class={['y-tooltip__popper', 'is-' + this.effect, this.popperClass]}
             onMouseleave={() => {
               this.setExpectedState(false)
               this.debounceClose()
@@ -151,12 +157,6 @@ export default {
             onMouseenter={() => {
               this.setExpectedState(true)
             }}
-            ref="popper"
-            role="tooltip"
-            id={this.tooltipId}
-            aria-hidden={this.disabled || !this.showPopper ? 'true' : 'false'}
-            v-show={!this.disabled && this.showPopper}
-            class={['y-tooltip__popper', 'is-' + this.effect, this.popperClass]}
           >
             {this.$slots.content || this.content}
           </div>

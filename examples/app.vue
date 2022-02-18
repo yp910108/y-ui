@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     {{ value }}
-    <y-tooltip :value="true" content="Top center" placement="top" manual>
-      <y-button>Dark</y-button>
-    </y-tooltip>
+    <y-slider v-model="value" />
   </div>
 </template>
 
@@ -12,7 +10,7 @@ export default {
   name: 'app',
   data() {
     return {
-      value: true
+      value: undefined
     }
   },
   methods: {}
