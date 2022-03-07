@@ -23,6 +23,7 @@ import Link from '../packages/link'
 import Main from '../packages/main'
 import Option from '../packages/option'
 import OptionGroup from '../packages/option-group'
+import Progress from '../packages/progress'
 import Radio from '../packages/radio'
 import RadioButton from '../packages/radio-button'
 import RadioGroup from '../packages/radio-group'
@@ -59,6 +60,7 @@ const components = [
   Main,
   Option,
   OptionGroup,
+  Progress,
   Radio,
   RadioButton,
   RadioGroup,
@@ -118,6 +120,7 @@ export default {
   Main,
   Option,
   OptionGroup,
+  Progress,
   Radio,
   RadioButton,
   RadioGroup,
