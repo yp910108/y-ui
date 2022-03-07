@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     {{ value }}
-    <y-progress type="circle" :percentage="50" />
+    <y-upload action="https://jsonplaceholder.typicode.com/posts/" list-type="picture-card">
+      <i class="y-icon-plus" />
+    </y-upload>
   </div>
 </template>
 

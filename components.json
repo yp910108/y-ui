@@ -33,5 +33,6 @@
   "tag": "./packages/tag/index.js",
   "time-picker": "./packages/time-picker/index.js",
   "time-select": "./packages/time-select/index.js",
-  "tooltip": "./packages/tooltip/index.js"
+  "tooltip": "./packages/tooltip/index.js",
+  "upload": "./packages/upload/index.js"
 }

@@ -36,6 +36,7 @@ import Tag from '../packages/tag'
 import TimePicker from '../packages/time-picker'
 import TimeSelect from '../packages/time-select'
 import Tooltip from '../packages/tooltip'
+import Upload from '../packages/upload'
 
 const components = [
   Aside,
@@ -72,7 +73,8 @@ const components = [
   Tag,
   TimePicker,
   TimeSelect,
-  Tooltip
+  Tooltip,
+  Upload
 ]
 
 const install = function (Vue, opts = {}) {
@@ -132,5 +134,6 @@ export default {
   Tag,
   TimePicker,
   TimeSelect,
-  Tooltip
+  Tooltip,
+  Upload
 }
