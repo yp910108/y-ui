@@ -9,6 +9,7 @@
   "checkbox-group": "./packages/checkbox-group/index.js",
   "col": "./packages/col/index.js",
   "container": "./packages/container/index.js",
+  "date-picker": "./packages/date-picker/index.js",
   "footer": "./packages/footer/index.js",
   "form": "./packages/form/index.js",
   "form-item": "./packages/form-item/index.js",
@@ -29,5 +30,7 @@
   "slider": "./packages/slider/index.js",
   "switch": "./packages/switch/index.js",
   "tag": "./packages/tag/index.js",
+  "time-picker": "./packages/time-picker/index.js",
+  "time-select": "./packages/time-select/index.js",
   "tooltip": "./packages/tooltip/index.js"
 }

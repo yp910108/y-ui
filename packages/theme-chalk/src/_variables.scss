@@ -66,6 +66,7 @@ $--fill-base: $--color-white !default;
 $--disabled-background-color-base: $--background-color-base !default;
 $--disabled-font-color-base: $--color-text-placeholder !default;
 $--disabled-border-color-base: $--border-color-light !default;
+$--font-color-disabled-base: #bbb !default;
 
 /* Transition
 -------------------------- */
@@ -175,6 +176,20 @@ $--checkbox-bordered-mini-height: 28px !default;
 $--checkbox-button-checked-background-color: $--color-primary !default;
 $--checkbox-button-checked-font-color: $--color-white !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
+
+/* DatePicker
+--------------------------*/
+$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-off-font-color: $--color-text-placeholder !default;
+$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-icon-color: $--color-text-primary !default;
+$--datepicker-border-color: $--disabled-border-color-base !default;
+$--datepicker-inner-border-color: #e4e4e4 !default;
+$--datepicker-inrange-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+$--datepicker-active-color: $--color-primary !default;
+$--datepicker-hover-font-color: $--color-primary !default;
+$--datepicker-cell-hover-color: #fff !default;
 
 /* Form
 -------------------------- */

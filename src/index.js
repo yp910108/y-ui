@@ -11,6 +11,7 @@ import CheckboxButton from '../packages/checkbox-button'
 import CheckboxGroup from '../packages/checkbox-group'
 import Col from '../packages/col'
 import Container from '../packages/container'
+import DatePicker from '../packages/date-picker'
 import Footer from '../packages/footer'
 import Form from '../packages/form'
 import FormItem from '../packages/form-item'
@@ -31,6 +32,8 @@ import Select from '../packages/select'
 import Slider from '../packages/slider'
 import Switch from '../packages/switch'
 import Tag from '../packages/tag'
+import TimePicker from '../packages/time-picker'
+import TimeSelect from '../packages/time-select'
 import Tooltip from '../packages/tooltip'
 
 const components = [
@@ -44,6 +47,7 @@ const components = [
   CheckboxGroup,
   Col,
   Container,
+  DatePicker,
   Footer,
   Form,
   FormItem,
@@ -64,6 +68,8 @@ const components = [
   Slider,
   Switch,
   Tag,
+  TimePicker,
+  TimeSelect,
   Tooltip
 ]
 
@@ -100,6 +106,7 @@ export default {
   CheckboxGroup,
   Col,
   Container,
+  DatePicker,
   Footer,
   Form,
   FormItem,
@@ -120,5 +127,7 @@ export default {
   Slider,
   Switch,
   Tag,
+  TimePicker,
+  TimeSelect,
   Tooltip
 }
