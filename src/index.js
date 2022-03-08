@@ -10,6 +10,7 @@ import Checkbox from '../packages/checkbox'
 import CheckboxButton from '../packages/checkbox-button'
 import CheckboxGroup from '../packages/checkbox-group'
 import Col from '../packages/col'
+import ColorPicker from '../packages/color-picker'
 import Container from '../packages/container'
 import DatePicker from '../packages/date-picker'
 import Dropdown from '../packages/dropdown'
@@ -51,6 +52,7 @@ const components = [
   CheckboxButton,
   CheckboxGroup,
   Col,
+  ColorPicker,
   Container,
   DatePicker,
   Dropdown,
@@ -115,6 +117,7 @@ export default {
   CheckboxButton,
   CheckboxGroup,
   Col,
+  ColorPicker,
   Container,
   DatePicker,
   Dropdown,

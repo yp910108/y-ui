@@ -8,6 +8,7 @@
   "checkbox-button": "./packages/checkbox-button/index.js",
   "checkbox-group": "./packages/checkbox-group/index.js",
   "col": "./packages/col/index.js",
+  "color-picker": "./packages/color-picker/index.js",
   "container": "./packages/container/index.js",
   "date-picker": "./packages/date-picker/index.js",
   "dropdown": "./packages/dropdown/index.js",
