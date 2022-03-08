@@ -15,6 +15,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
+  devtool: '#eval-source-map',
   entry: isProd ? { docs: './examples/entry.js' } : './examples/entry.js',
   output: {
     path: path.join(__dirname, '../examples/y-ui'),
