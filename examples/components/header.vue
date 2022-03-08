@@ -25,7 +25,7 @@
         <!-- nav -->
         <ul class="nav">
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
-            <algolia-search></algolia-search>
+            <algolia-search />
           </li>
           <li class="nav-item">
             <router-link active-class="active" :to="`/${lang}/guide`">{{ langConfig.guide }} </router-link>
@@ -47,32 +47,32 @@
 
           <!-- 版本选择器 -->
           <li class="nav-item nav-versions" v-show="isComponentPage">
-            <el-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
+            <y-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
               <span>
                 {{ version }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
+                <i class="y-icon-arrow-down y-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
-                <el-dropdown-item v-for="item in Object.keys(versions)" :key="item" @click.native="switchVersion(item)">
+              <y-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
+                <y-dropdown-item v-for="item in Object.keys(versions)" :key="item" @click.native="switchVersion(item)">
                   {{ item }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </y-dropdown-item>
+              </y-dropdown-menu>
+            </y-dropdown>
           </li>
 
           <!-- 语言选择器 -->
           <li class="nav-item lang-item">
-            <el-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">
+            <y-dropdown trigger="click" class="nav-dropdown nav-lang" :class="{ 'is-active': langDropdownVisible }">
               <span>
                 {{ displayedLang }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
+                <i class="y-icon-arrow-down y-icon--right"></i>
               </span>
-              <el-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">
-                <el-dropdown-item v-for="(value, key) in langs" :key="key" @click.native="switchLang(key)">
+              <y-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleLangDropdownToggle">
+                <y-dropdown-item v-for="(value, key) in langs" :key="key" @click.native="switchLang(key)">
                   {{ value }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </y-dropdown-item>
+              </y-dropdown-menu>
+            </y-dropdown>
           </li>
         </ul>
       </div>
@@ -80,10 +80,10 @@
   </div>
 </template>
 <script>
+import Yui from 'main'
 import ThemePicker from './theme-picker'
 import AlgoliaSearch from './search'
 import compoLang from '../i18n/component'
-import Yui from 'main'
 import themeLoader from './theme/loader'
 import bus from '../bus'
 import { ACTION_USER_CONFIG_UPDATE } from './theme/constant'

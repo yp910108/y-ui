@@ -12,6 +12,9 @@ import CheckboxGroup from '../packages/checkbox-group'
 import Col from '../packages/col'
 import Container from '../packages/container'
 import DatePicker from '../packages/date-picker'
+import Dropdown from '../packages/dropdown'
+import DropdownMenu from '../packages/dropdown-menu'
+import DropdownItem from '../packages/dropdown-item'
 import Footer from '../packages/footer'
 import Form from '../packages/form'
 import FormItem from '../packages/form-item'
@@ -50,6 +53,9 @@ const components = [
   Col,
   Container,
   DatePicker,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
   Footer,
   Form,
   FormItem,
@@ -111,6 +117,9 @@ export default {
   Col,
   Container,
   DatePicker,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
   Footer,
   Form,
   FormItem,

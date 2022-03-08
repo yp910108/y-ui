@@ -6,7 +6,7 @@ const nodes = postcss.parse(fontFile).nodes
 const classList = []
 
 for (const { selector = '' } of nodes) {
-  const reg = /\.el-icon-([^:]+):before/
+  const reg = /\.y-icon-([^:]+):before/
   const arr = selector.match(reg)
   if (arr && arr[1]) {
     classList.push(arr[1])

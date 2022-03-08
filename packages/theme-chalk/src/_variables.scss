@@ -177,7 +177,7 @@ $--checkbox-button-checked-background-color: $--color-primary !default;
 $--checkbox-button-checked-font-color: $--color-white !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
 
-/* DatePicker
+/* DatePicker 未整理
 --------------------------*/
 $--datepicker-font-color: $--color-text-regular !default;
 $--datepicker-off-font-color: $--color-text-placeholder !default;
@@ -190,6 +190,12 @@ $--datepicker-inrange-hover-background-color: $--border-color-extra-light !defau
 $--datepicker-active-color: $--color-primary !default;
 $--datepicker-hover-font-color: $--color-primary !default;
 $--datepicker-cell-hover-color: #fff !default;
+
+/* Dropdown 未整理
+-------------------------- */
+$--dropdown-menu-box-shadow: $--box-shadow-light !default;
+$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
+$--dropdown-menuItem-hover-color: $--color-primary-light-2 !default;
 
 /* Form
 -------------------------- */

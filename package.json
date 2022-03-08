@@ -11,7 +11,7 @@
     "build:umd": "node build/bin/build-locale.js",
     "clean": "rimraf lib && rimraf packages/*/lib",
     "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
+    "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
     "lint": "eslint src/**/* test/**/* packages/**/* build/**/* --quiet"
   },
   "keywords": [
