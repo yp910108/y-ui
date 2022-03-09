@@ -20,7 +20,8 @@
         "lang": "zh-CN",
         "titleSize": "34",
         "paraSize": "18"
-      }
+      },
+      "component": {}
     }
   }
 ]

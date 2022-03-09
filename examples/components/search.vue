@@ -2,12 +2,12 @@
   <y-autocomplete
     v-model="query"
     size="small"
+    highlight-first-item
     :popper-class="`algolia-search${isEmpty ? ' is-empty' : ''}`"
     :fetch-suggestions="querySearch"
     :placeholder="placeholder"
     :trigger-on-focus="false"
     @select="handleSelect"
-    highlight-first-item
   >
     <template slot-scope="props">
       <p class="algolia-search-title" v-if="props.item.title">

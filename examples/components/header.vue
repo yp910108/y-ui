@@ -81,16 +81,17 @@
 </template>
 <script>
 import Yui from 'main'
-import ThemePicker from './theme-picker'
 import AlgoliaSearch from './search'
 import compoLang from '../i18n/component'
-import themeLoader from './theme/loader'
 import bus from '../bus'
 import { ACTION_USER_CONFIG_UPDATE } from './theme/constant'
 
 const { version } = Yui
 
 export default {
+  components: {
+    AlgoliaSearch
+  },
   data() {
     return {
       active: '',
@@ -106,14 +107,23 @@ export default {
       }
     }
   },
-
-  mixins: [themeLoader],
-
-  components: {
-    ThemePicker,
-    AlgoliaSearch
+  methods: {
+    switchVersion(version) {
+      if (version === this.version) return
+      location.href = `${location.origin}/${this.versions[version]}/${location.hash} `
+    },
+    switchLang(targetLang) {
+      if (this.lang === targetLang) return
+      localStorage.setItem('YUI_LANGUAGE', targetLang)
+      this.$router.push(this.$route.path.replace(this.lang, targetLang))
+    },
+    handleVerDropdownToggle(visible) {
+      this.verDropdownVisible = visible
+    },
+    handleLangDropdownToggle(visible) {
+      this.langDropdownVisible = visible
+    }
   },
-
   computed: {
     lang() {
       return this.$route.path.split('/')[1] || 'zh-CN'
@@ -131,39 +141,6 @@ export default {
       return /^home/.test(this.$route.name)
     }
   },
-  mounted() {
-    const testInnerImg = new Image()
-    testInnerImg.onload = () => {
-      this.$isEle = true
-      ga('send', 'event', 'DocView', 'Ali', 'Inner')
-    }
-    testInnerImg.onerror = (err) => {
-      ga('send', 'event', 'DocView', 'Ali', 'Outer')
-      console.error(err)
-    }
-    testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`
-  },
-  methods: {
-    switchVersion(version) {
-      if (version === this.version) return
-      location.href = `${location.origin}/${this.versions[version]}/${location.hash} `
-    },
-
-    switchLang(targetLang) {
-      if (this.lang === targetLang) return
-      localStorage.setItem('ELEMENT_LANGUAGE', targetLang)
-      this.$router.push(this.$route.path.replace(this.lang, targetLang))
-    },
-
-    handleVerDropdownToggle(visible) {
-      this.verDropdownVisible = visible
-    },
-
-    handleLangDropdownToggle(visible) {
-      this.langDropdownVisible = visible
-    }
-  },
-
   created() {
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = (_) => {
@@ -190,6 +167,18 @@ export default {
       })
       primaryLast = primaryColor
     })
+  },
+  mounted() {
+    // const testInnerImg = new Image()
+    // testInnerImg.onload = () => {
+    //   this.$isEle = true
+    //   ga('send', 'event', 'DocView', 'Ali', 'Inner')
+    // }
+    // testInnerImg.onerror = (err) => {
+    //   ga('send', 'event', 'DocView', 'Ali', 'Outer')
+    //   console.error(err)
+    // }
+    // testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`
   }
 }
 </script>

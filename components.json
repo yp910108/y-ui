@@ -26,6 +26,7 @@
   "main": "./packages/main/index.js",
   "option": "./packages/option/index.js",
   "option-group": "./packages/option-group/index.js",
+  "popover": "./packages/popover/index.js",
   "progress": "./packages/progress/index.js",
   "radio": "./packages/radio/index.js",
   "radio-button": "./packages/radio-button/index.js",

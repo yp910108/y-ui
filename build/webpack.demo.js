@@ -2,7 +2,7 @@ const path = require('path')
 // const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -26,7 +26,8 @@ const webpackConfig = {
     alias: config.alias
   },
   devServer: {
-    port: 1527
+    port: 1527,
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -56,6 +57,22 @@ const webpackConfig = {
         use: [isProd ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader']
       },
       {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.join(__dirname, './md-loader/index.js')
+          }
+        ]
+      },
+      {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
         loader: 'url-loader'
       }
@@ -67,6 +84,7 @@ const webpackConfig = {
       filename: 'index.html',
       favicon: path.join(__dirname, '../examples/favicon.ico')
     }),
+    new CopyWebpackPlugin([{ from: 'examples/versions.json' }]),
     new ProgressBarPlugin(),
     new VueLoaderPlugin()
   ]

@@ -6,6 +6,9 @@ import routes from './route.config'
 import entry from './app'
 
 import 'packages/theme-chalk/src/index.scss'
+import './demo-styles/index.scss'
+import './assets/styles/common.css'
+import './assets/styles/fonts/style.css'
 
 Vue.use(VueRouter)
 
