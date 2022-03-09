@@ -2,6 +2,7 @@
 
 import locale from './locale'
 import Aside from '../packages/aside'
+import Autocomplete from '../packages/autocomplete'
 import Button from '../packages/button'
 import ButtonGroup from '../packages/button-group'
 import Cascader from '../packages/cascader'
@@ -44,6 +45,7 @@ import Upload from '../packages/upload'
 
 const components = [
   Aside,
+  Autocomplete,
   Button,
   ButtonGroup,
   Cascader,
@@ -109,6 +111,7 @@ export default {
   i18n: locale.i18n,
   install,
   Aside,
+  Autocomplete,
   Button,
   ButtonGroup,
   Cascader,

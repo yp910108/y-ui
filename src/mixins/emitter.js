@@ -1,4 +1,4 @@
-function broadcast(componentName, eventName, params) {
+function broadcast(componentName, eventName, ...params) {
   for (const child of this.$children) {
     const name = child.$options.name
     if (name === componentName) {

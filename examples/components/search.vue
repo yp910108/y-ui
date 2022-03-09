@@ -1,5 +1,5 @@
 <template>
-  <el-autocomplete
+  <y-autocomplete
     v-model="query"
     size="small"
     :popper-class="`algolia-search${isEmpty ? ' is-empty' : ''}`"
@@ -21,7 +21,7 @@
       </a>
       <p class="algolia-search-empty" v-if="props.item.isEmpty">{{ emptyText }}</p>
     </template>
-  </el-autocomplete>
+  </y-autocomplete>
 </template>
 
 <style lang="scss">
@@ -29,12 +29,12 @@
   width: 450px !important;
 
   &.is-empty {
-    .el-autocomplete-suggestion__list {
+    .y-autocomplete-suggestion__list {
       padding-bottom: 0;
     }
   }
 
-  .el-autocomplete-suggestion__list {
+  .y-autocomplete-suggestion__list {
     position: static !important;
     padding-bottom: 28px;
   }

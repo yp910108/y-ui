@@ -1,4 +1,4 @@
-import { ELEMENT_THEME_PREVIEW_CONFIG, ELEMENT_THEME_USER_CONFIG } from './constant'
+import { YUI_THEME_PREVIEW_CONFIG, YUI_THEME_USER_CONFIG } from './constant'
 
 export const saveToLocal = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value))
@@ -14,21 +14,21 @@ export const loadFromLocal = (key) => {
 }
 
 export const savePreviewToLocal = (value) => {
-  saveToLocal(ELEMENT_THEME_PREVIEW_CONFIG, value)
+  saveToLocal(YUI_THEME_PREVIEW_CONFIG, value)
 }
 
 export const loadPreviewFromLocal = () => {
-  return loadFromLocal(ELEMENT_THEME_PREVIEW_CONFIG) || {}
+  return loadFromLocal(YUI_THEME_PREVIEW_CONFIG) || {}
 }
 
 export const removePreviewFromLocal = () => {
-  return localStorage.removeItem(ELEMENT_THEME_PREVIEW_CONFIG)
+  return localStorage.removeItem(YUI_THEME_PREVIEW_CONFIG)
 }
 
 export const saveUserThemeToLocal = (value) => {
-  saveToLocal(ELEMENT_THEME_USER_CONFIG, value)
+  saveToLocal(YUI_THEME_USER_CONFIG, value)
 }
 
 export const loadUserThemeFromLocal = () => {
-  return loadFromLocal(ELEMENT_THEME_USER_CONFIG)
+  return loadFromLocal(YUI_THEME_USER_CONFIG)
 }
