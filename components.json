@@ -1,6 +1,7 @@
 {
   "aside": "./packages/aside/index.js",
   "autocomplete": "./packages/autocomplete/index.js",
+  "backtop": "./packages/backtop/index.js",
   "button": "./packages/button/index.js",
   "button-group": "./packages/button-group/index.js",
   "cascader": "./packages/cascader/index.js",

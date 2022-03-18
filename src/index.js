@@ -3,6 +3,7 @@
 import locale from './locale'
 import Aside from '../packages/aside'
 import Autocomplete from '../packages/autocomplete'
+import Backtop from '../packages/backtop'
 import Button from '../packages/button'
 import ButtonGroup from '../packages/button-group'
 import Cascader from '../packages/cascader'
@@ -47,6 +48,7 @@ import Upload from '../packages/upload'
 const components = [
   Aside,
   Autocomplete,
+  Backtop,
   Button,
   ButtonGroup,
   Cascader,
@@ -114,6 +116,7 @@ export default {
   install,
   Aside,
   Autocomplete,
+  Backtop,
   Button,
   ButtonGroup,
   Cascader,

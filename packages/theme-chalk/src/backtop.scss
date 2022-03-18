@@ -1,0 +1,18 @@
+@include b(backtop) {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: $--backtop-background-color;
+  color: $--backtop-font-color;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  &:hover {
+    background-color: $--backtop-hover-background-color;
+  }
+}

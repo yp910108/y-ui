@@ -45,17 +45,43 @@
           <div class="footer-popover-title">{{ langConfig.eleme }} UED</div>
           <img src="../assets/images/qrcode.png" alt="" />
         </y-popover>
-        <i class="doc-icon-weixin elementdoc" v-popover:weixin></i>
+        <i v-popover:weixin class="doc-icon-weixin elementdoc" />
         <a href="https://github.com/elemefe" target="_blank">
-          <i class="doc-icon-github elementdoc"></i>
+          <i class="doc-icon-github elementdoc" />
         </a>
         <a :href="gitterLink" target="_blank">
-          <i class="doc-icon-gitter elementdoc"></i>
+          <i class="doc-icon-gitter elementdoc" />
         </a>
       </div>
     </div>
   </footer>
 </template>
+
+<script>
+import Yui from 'main'
+import compoLang from '../i18n/component'
+
+const { version } = Yui
+
+export default {
+  data() {
+    return {
+      version
+    }
+  },
+  computed: {
+    lang() {
+      return this.$route.path.split('/')[1] || 'zh-CN'
+    },
+    langConfig() {
+      return compoLang.filter((config) => config.lang === this.lang)[0]['footer']
+    },
+    gitterLink() {
+      return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/element' : 'https://gitter.im/element-en/Lobby'
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .footer {
@@ -173,31 +199,3 @@
   }
 }
 </style>
-
-<script type="text/babel">
-import compoLang from '../i18n/component.json'
-import Element from 'main/index.js'
-const { version } = Element
-
-export default {
-  data() {
-    return {
-      version
-    }
-  },
-
-  computed: {
-    lang() {
-      return this.$route.path.split('/')[1] || 'zh-CN'
-    },
-
-    langConfig() {
-      return compoLang.filter((config) => config.lang === this.lang)[0]['footer']
-    },
-
-    gitterLink() {
-      return this.lang === 'zh-CN' ? 'https://gitter.im/ElemeFE/element' : 'https://gitter.im/element-en/Lobby'
-    }
-  }
-}
-</script>
