@@ -1,8 +1,9 @@
 import Vue from 'vue'
+import hljs from 'highlight.js'
 import VueRouter from 'vue-router'
 import Yui from 'main'
-// import locale from 'main/locale/lang/en'
 import routes from './route.config'
+import title from './i18n/title'
 import entry from './app'
 
 import 'packages/theme-chalk/src/index.scss'
@@ -18,6 +19,23 @@ const router = new VueRouter({
   mode: 'hash',
   base: __dirname,
   routes
+})
+
+router.afterEach((route) => {
+  // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
+  Vue.nextTick(() => {
+    const blocks = document.querySelectorAll('pre code:not(.hljs)')
+    Array.prototype.forEach.call(blocks, hljs.highlightBlock)
+  })
+  const data = title[route.meta.lang]
+  for (let val in data) {
+    if (new RegExp('^' + val, 'g').test(route.name)) {
+      document.title = data[val]
+      return
+    }
+  }
+  document.title = 'Element'
+  ga('send', 'event', 'PageView', route.name)
 })
 
 new Vue({

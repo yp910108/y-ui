@@ -1,191 +1,58 @@
 <template>
-  <div class="app" style="height: 500px; overflow: auto">
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <div>fsdfds</div>
-    <y-backtop target=".app" />
+  <div id="app" :class="{ 'is-component': isComponent }">
+    <main-header v-if="lang !== 'play'" />
+    <div class="main-cnt">
+      <router-view />
+    </div>
+    <main-footer v-if="lang !== 'play' && !isComponent" />
   </div>
 </template>
 
 <script>
+import { use } from 'main/locale'
+import zhLocale from 'main/locale/lang/zh-CN'
+import enLocale from 'main/locale/lang/en'
+import esLocale from 'main/locale/lang/es'
+import frLocale from 'main/locale/lang/fr'
+import MainHeader from './components/header'
+import MainFooter from './components/footer'
+
+const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN'
+const localize = (lang) => {
+  switch (lang) {
+    case 'zh-CN':
+      use(zhLocale)
+      break
+    case 'es':
+      use(esLocale)
+      break
+    case 'fr-FR':
+      use(frLocale)
+      break
+    default:
+      use(enLocale)
+  }
+}
+localize(lang)
+
 export default {
-  data() {
-    return {
-      visible: false
+  name: 'app',
+  components: { MainHeader, MainFooter },
+  computed: {
+    lang() {
+      return this.$route.path.split('/')[1] || 'zh-CN'
+    },
+    isComponent() {
+      return /^component-/.test(this.$route.name || '')
     }
+  },
+  watch: {
+    lang(val) {
+      localize(val)
+    }
+  },
+  mounted() {
+    localize(this.lang)
   }
 }
 </script>

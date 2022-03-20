@@ -1,12 +1,12 @@
 <template>
   <div class="footer-nav">
     <span v-if="leftNav" class="footer-nav-link footer-nav-left" @click="handleNavClick('prev')">
-      <i class="el-icon-arrow-left" />
+      <i class="y-icon-arrow-left" />
       {{ leftNav.title || leftNav.name }}
     </span>
     <span v-if="rightNav" class="footer-nav-link footer-nav-right" @click="handleNavClick('next')">
       {{ rightNav.title || rightNav.name }}
-      <i class="el-icon-arrow-right" />
+      <i class="y-icon-arrow-right" />
     </span>
   </div>
 </template>
