@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./functions";
+
 /* Break-points
  -------------------------- */
 @mixin res($key, $map: $--breakpoints) {

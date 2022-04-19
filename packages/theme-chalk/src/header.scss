@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 @include b(header) {
   flex-shrink: 0;
   box-sizing: border-box;

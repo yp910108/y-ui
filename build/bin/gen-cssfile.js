@@ -10,12 +10,7 @@ function fileExists(filePath) {
   }
 }
 
-let content = `@import './config';
-@import './variables';
-@import './functions';
-@import './mixins';
-@import './transition';
-`
+let content = ''
 
 for (const key of Object.keys(Components)) {
   const fileName = `${key}.scss`

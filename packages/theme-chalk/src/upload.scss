@@ -1,3 +1,7 @@
+@import "./variables";
+@import "./mixins";
+@import "./progress";
+
 @include b(upload) {
   display: inline-block;
   text-align: center;

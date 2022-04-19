@@ -1,4 +1,7 @@
-@import './popper';
+@import "./variables";
+@import "./mixins";
+@import "./scrollbar.scss";
+@import "./popper";
 @import './date-picker/picker';
 @import './date-picker/date-picker';
 

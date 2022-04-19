@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 @include b(checkbox) {
   color: $--checkbox-font-color;
   font-weight: $--checkbox-font-weight;

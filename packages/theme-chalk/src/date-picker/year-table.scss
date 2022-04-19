@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 @include b(year-table) {
   font-size: 12px;
   margin: -1px;

@@ -1,3 +1,5 @@
+@import "./mixins";
+
 [class*='y-col-'] {
   float: left;
   box-sizing: border-box;

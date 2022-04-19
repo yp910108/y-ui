@@ -1,3 +1,7 @@
+@import "./variables";
+@import "./mixins";
+@import "./input";
+
 @include b(input-number) {
   position: relative;
   display: inline-block;

@@ -12,7 +12,9 @@
     "clean": "rimraf lib && rimraf packages/*/lib",
     "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js",
     "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
-    "lint": "eslint src/**/* test/**/* packages/**/* build/**/* --quiet"
+    "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils && npm run build:umd && npm run build:theme",
+    "lint": "eslint src/**/* test/**/* packages/**/* build/**/* --quiet",
+    "pub": "npm run bootstrap && sh build/git-release.sh && sh build/release.sh"
   },
   "keywords": [
     "vue",
@@ -69,6 +71,7 @@
     "progress-bar-webpack-plugin": "^1.11.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^7.1.0",
+    "select-version-cli": "^0.0.2",
     "style-loader": "^0.23.1",
     "transliteration": "^1.1.11",
     "uglifyjs-webpack-plugin": "^2.1.1",

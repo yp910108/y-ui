@@ -1,3 +1,7 @@
+@import "../variables";
+@import "../mixins";
+@import "../transition";
+
 @include b(date-editor) {
   position: relative;
   display: inline-block;

@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 @include b(color-predefine) {
   display: flex;
   font-size: 12px;

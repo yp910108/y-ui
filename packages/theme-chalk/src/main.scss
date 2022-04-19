@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 @include b(main) {
   // IE11 supports the <main> element partially https://caniuse.com/#search=main
   display: block;

@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
 @include b(popper) {
   .popper__arrow,
   .popper__arrow::after {

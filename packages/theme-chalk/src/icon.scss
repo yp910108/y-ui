@@ -1,3 +1,5 @@
+@import "./variables";
+
 @font-face {
   src: url('#{$--font-path}/y-icons.woff') format('woff') /* chrome, firefox */,
     url('#{$--font-path}/y-icons.ttf') format('truetype') /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/;

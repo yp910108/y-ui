@@ -131,21 +131,21 @@
 </style>
 <template>
   <y-scrollbar class="page-component__scroll" ref="componentScrollBar">
-  <div class="page-container page-component">
-    <y-scrollbar class="page-component__nav">
-      <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
-    </y-scrollbar>
-    <div class="page-component__content">
-      <router-view class="content"></router-view>
-      <footer-nav></footer-nav>
+    <div class="page-container page-component">
+      <y-scrollbar class="page-component__nav">
+        <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
+      </y-scrollbar>
+      <div class="page-component__content">
+        <router-view class="content"></router-view>
+        <footer-nav></footer-nav>
+      </div>
+      <y-backtop
+        v-if="showBackToTop"
+        target=".page-component__scroll .y-scrollbar__wrap"
+        :right="100"
+        :bottom="150"
+      ></y-backtop>
     </div>
-    <y-backtop 
-      v-if="showBackToTop"
-      target=".page-component__scroll .y-scrollbar__wrap"
-      :right="100"
-      :bottom="150"
-    ></y-backtop>
-  </div>
   </y-scrollbar>
 </template>
 <script>
