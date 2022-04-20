@@ -1,6 +1,6 @@
 {
-  "name": "y-ui",
-  "version": "1.0.0",
+  "name": "@yp910108/y-ui",
+  "version": "1.0.3",
   "description": "A Component Library for Vue.js.",
   "main": "lib/y-ui.common.js",
   "scripts": {
@@ -22,6 +22,9 @@
     "ui"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "async-validator": "~1.8.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",

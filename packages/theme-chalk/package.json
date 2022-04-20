@@ -1,7 +1,7 @@
 {
-  "name": "element-theme-chalk",
-  "version": "1.0.0",
-  "description": "Element component chalk theme.",
+  "name": "@yp910108/yui-theme-chalk",
+  "version": "1.0.3",
+  "description": "yui component chalk theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
   "files": [
@@ -20,6 +20,9 @@
     "theme"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/yp910108/theme-chalk/issues"
   },
