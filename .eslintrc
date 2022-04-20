@@ -6,5 +6,5 @@
       "jsx": true
     }
   },
-  "plugins": ["html"]
+  "plugins": ["html", "json"]
 }

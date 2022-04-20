@@ -1,6 +1,6 @@
 {
   "name": "y-ui",
-  "version": "2.15.6",
+  "version": "1.0.0",
   "description": "A Component Library for Vue.js.",
   "main": "lib/y-ui.common.js",
   "scripts": {
@@ -51,6 +51,7 @@
     "eslint": "4.18.2",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-json": "^1.2.0",
     "file-save": "^0.2.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
