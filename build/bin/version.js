@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const version = require('../../package.json').version
+const version = process.env.VERSION || require('../../package.json').version
 const content = {
   '1.4.13': '1.4',
   '2.0.11': '2.0',
