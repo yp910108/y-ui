@@ -1,3 +1,6 @@
+/**
+ * output: examples/icon.json
+ */
 const fs = require('fs')
 const path = require('path')
 const postcss = require('postcss')

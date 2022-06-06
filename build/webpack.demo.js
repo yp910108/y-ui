@@ -84,9 +84,9 @@ const webpackConfig = {
       filename: 'index.html',
       favicon: path.join(__dirname, '../examples/favicon.ico')
     }),
+    new VueLoaderPlugin(),
     new CopyWebpackPlugin([{ from: 'examples/versions.json' }]),
-    new ProgressBarPlugin(),
-    new VueLoaderPlugin()
+    new ProgressBarPlugin()
   ]
 }
 

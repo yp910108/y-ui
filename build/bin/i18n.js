@@ -1,3 +1,7 @@
+/**
+ * entry: examples/pages/template/${page}
+ * output: examples/pages/${lang}/${page}
+ */
 const path = require('path')
 const fs = require('fs')
 const langConfig = require('../../examples/i18n/page.json')

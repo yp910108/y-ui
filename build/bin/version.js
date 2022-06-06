@@ -1,3 +1,6 @@
+/**
+ * output: examples/versions.json
+ */
 const path = require('path')
 const fs = require('fs')
 const version = process.env.VERSION || require('../../package.json').version
