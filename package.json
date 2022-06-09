@@ -5,6 +5,9 @@
   "main": "lib/y-ui.common.js",
   "unpkg": "lib/index.js",
   "style": "lib/theme-chalk/index.css",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/i18n.js & node build/bin/version.js",
