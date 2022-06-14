@@ -14,7 +14,7 @@ module.exports = {
     publicPath: '/dist',
     filename: 'y-ui.common.js',
     chunkFilename: '[id].js',
-    library: 'YUI',
+    // library: 'YUI', // 多余
     libraryTarget: 'commonjs2',
     libraryExport: 'default'
   },

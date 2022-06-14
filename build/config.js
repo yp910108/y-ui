@@ -10,25 +10,31 @@ const transitionList = fs.readdirSync(path.join(__dirname, '../src/transitions')
 const externals = {}
 
 for (const key of Object.keys(Components)) {
-  externals[`y-ui/packages/${key}`] = `y-ui/lib/${key}`
+  externals[`packages/${key}`] = `y-ui/lib/${key}`
 }
 
-externals['y-ui/src/locale'] = 'y-ui/lib/locale'
+externals['main/locale'] = 'y-ui/lib/locale'
 
 for (const file of utilList) {
   const basename = path.basename(file, '.js')
-  externals[`y-ui/src/utils/${basename}`] = `y-ui/lib/utils/${basename}`
+  externals[`main/utils/${basename}`] = `y-ui/lib/utils/${basename}`
 }
 for (const file of mixinList) {
   const basename = path.basename(file, '.js')
-  externals[`y-ui/src/mixins/${basename}`] = `y-ui/lib/mixins/${basename}`
+  externals[`main/mixins/${basename}`] = `y-ui/lib/mixins/${basename}`
 }
 for (const file of transitionList) {
   const basename = path.basename(file, '.js')
-  externals[`y-ui/src/transitions/${basename}`] = `y-ui/lib/transitions/${basename}`
+  externals[`main/transitions/${basename}`] = `y-ui/lib/transitions/${basename}`
 }
 
-exports.externals = [{ vue: 'vue', ...externals }, nodeExternals()] // TODO what?
+exports.externals = [
+  {
+    // vue: 'vue', // 多余
+    ...externals
+  },
+  nodeExternals()
+]
 
 exports.alias = {
   'y-ui': path.join(__dirname, '../'),
